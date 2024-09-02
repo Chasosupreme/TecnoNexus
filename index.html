@@ -1,3 +1,6 @@
+Vamos a ajustar el código para incluir la sección de la imagen y eliminar la sección de video. Aquí está el código actualizado:
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -81,7 +84,7 @@
         .container button:hover {
             background-color: #004494;
         }
-        .introduction, .analysis, .files {
+        .introduction {
             overflow: hidden;
             z-index: 2;
             opacity: 0;
@@ -93,16 +96,7 @@
             text-align: center;
             background: rgba(0, 0, 0, 0.6);
         }
-        .introduction video, .files audio {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        .introduction-content, .files-content, .analysis-content {
+        .introduction-content {
             position: relative;
             width: 80%;
             max-width: 600px;
@@ -112,7 +106,7 @@
             color: #fff;
             z-index: 1;
         }
-        .introduction-content h1, .analysis-content h1 {
+        .introduction-content h1 {
             font-size: 3em;
             margin: 0;
         }
@@ -121,6 +115,16 @@
             height: 3px;
             background: linear-gradient(to bottom, #2e2e2e, #4d4d4d);
             margin: 20px 0;
+        }
+        .analysis, .files {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            visibility: hidden;
+            flex-direction: column;
+            padding: 20px;
         }
         footer {
             background-color: #333;
@@ -131,7 +135,7 @@
             bottom: 0;
             text-align: center;
         }
-        .introduction-content button, .files-content button, .analysis-content button {
+        .introduction-content button, .analysis button, .files button {
             background-color: #0056b3;
             color: white;
             border: none;
@@ -141,13 +145,17 @@
             cursor: pointer;
             margin-top: 20px;
         }
-        .introduction-content button:hover, .files-content button:hover, .analysis-content button:hover {
+        .introduction-content button:hover, .analysis button:hover, .files button:hover {
             background-color: #004494;
         }
+        .files-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .files-content a {
-            display: block;
-            margin: 10px 0;
-            color: #fff;
+            margin: 10px;
+            color: #0056b3;
             text-decoration: none;
             font-size: 1.2em;
         }
@@ -163,62 +171,52 @@
             Andrés Felipe Rodríguez López y Víctor Daniel Ramírez de 1001, del Colegio Montferri, crearon esta página.
         </div>
         <div class="author-buttons">
-            <button onclick="showSection('zone1')">Inicio</button>
-            <button onclick="showSection('zone2')">Introducción</button>
-            <button onclick="showSection('zone3')">Análisis</button>
-            <button onclick="showSection('zone4')">Archivos</button>
+            <button onclick="showSection('analysis')">Análisis</button>
+            <button onclick="showSection('planning')">Planeación</button>
+            <button onclick="showSection('execution')">Ejecución</button>
+            <button onclick="showSection('evaluation')">Evaluación</button>
         </div>
     </div>
 
     <!-- Zona 1: Contenido inicial -->
     <div class="container" id="zone1">
         <h1>TecnoNexus</h1>
-        <button onclick="showSection('zone2')">Mostrar Introducción</button>
+        <button onclick="showSection('introduction')">Mostrar Introducción</button>
     </div>
 
-    <!-- Zona 2: Introducción con video -->
+    <!-- Zona 2: Introducción -->
     <div class="introduction" id="zone2">
-        <video autoplay muted loop>
-            <source src="{{ url_for('static', filename='pictures/video1.mp4') }}" type="video/mp4">
-            Tu navegador no soporta videos en HTML5.
-        </video>
         <div class="introduction-content">
             <h1>Introducción</h1>
             <div class="separator"></div>
             <p>¡Bienvenido a la introducción de TecnoNexus!</p>
-            <button onclick="showSection('zone1')">Volver</button>
+            <button onclick="reloadPage()">Volver</button>
         </div>
     </div>
 
     <!-- Zona 3: Análisis -->
     <div class="analysis" id="zone3">
-        <div class="analysis-content">
-            <h1>Análisis</h1>
-            <div class="separator"></div>
-            <p><strong>Descripción del problema:</strong> Nuestro proyecto aborda la falta de configuraciones seguras en muchos entornos empresariales.</p>
-            <p><strong>Objetivo del proyecto:</strong> Crear un servidor seguro que reduzca riesgos mediante prácticas óptimas y medidas de seguridad robustas.</p>
-            <p><strong>Alcance del proyecto:</strong> Implementación y configuración de servidores con políticas de seguridad.</p>
-            <p><strong>Lugar de implementación:</strong> En el entorno de red designado para el proyecto.</p>
-            <p><strong>Evidencia fotográfica:</strong> Se presentarán fotografías de la configuración y pruebas realizadas.</p>
-            <p><strong>Infografía:</strong> Incluye el marco teórico sobre seguridad y configuración de servidores.</p>
-            <p><strong>Formato de acuerdo y consentimiento:</strong> Documentos necesarios para validar el proyecto.</p>
-            <button onclick="showSection('zone1')">Volver</button>
-        </div>
+        <h1>Análisis</h1>
+        <div class="separator"></div>
+        <p><strong>Descripción del problema:</strong> En muchos entornos empresariales, la falta de configuraciones seguras puede resultar en vulnerabilidades explotables.</p>
+        <p><strong>Objetivo del proyecto:</strong> Crear un servidor seguro que reduzca los riesgos mediante prácticas de configuración óptima y medidas de seguridad robustas.</p>
+        <p><strong>Alcance del proyecto:</strong> Implementar configuraciones de servidores seguros, incluyendo instalación de sistemas operativos y servicios esenciales.</p>
+        <p><strong>Lugar de implementación:</strong> Entorno controlado para pruebas y desarrollo.</p>
+        <p><strong>Evidencia fotográfica:</strong> [Aquí se mostrará evidencia fotográfica del proyecto]</p>
+        <p><strong>Infografía (marco teórico):</strong> [Aquí se incluirá la infografía correspondiente]</p>
+        <p><strong>Formato de acuerdo y consentimiento:</strong> [Aquí se mostrará el formato de acuerdo y consentimiento]</p>
+        <button onclick="reloadPage()">Volver</button>
     </div>
 
     <!-- Zona 4: Archivos -->
     <div class="files" id="zone4">
+        <h1>Archivos del Proyecto</h1>
         <div class="files-content">
-            <h1>Archivos del Proyecto</h1>
-            <div class="separator"></div>
-            <audio controls>
-                <source src="{{ url_for('static', filename='audio/audiofile.mp3') }}" type="audio/mp3">
-                Tu navegador no soporta audio en HTML5.
-            </audio>
-            <a href="{{ url_for('static', filename='files/proyecto_es.pdf') }}" target="_blank">Proyecto en Español</a>
-            <a href="{{ url_for('static', filename='files/project_en.pdf') }}" target="_blank">Project in English</a>
-            <button onclick="showSection('zone1')">Volver</button>
+            <a href="{{ url_for('static', filename='audio/proyecto_audio.mp3') }}" download>Descargar Audio del Proyecto</a>
+            <a href="{{ url_for('static', filename='files/proyecto_espanol.pdf') }}" download>Descargar Proyecto en Español</a>
+            <a href="{{ url_for('static', filename='files/proyecto_ingles.pdf') }}" download>Descargar Proyecto en Inglés</a>
         </div>
+        <button onclick="reloadPage()">Volver</button>
     </div>
 
     <footer>
@@ -226,15 +224,29 @@
     </footer>
 
     <script>
-        function showSection(zoneId) {
-            document.querySelectorAll('.container, .introduction, .analysis, .files').forEach(section => {
-                section.style.opacity = '0'; // Desvanece todas las zonas
-                section.style.visibility = 'hidden'; // Oculta todas las zonas
-            });
-            document.getElementById(zoneId).style.opacity = '1'; // Muestra la zona seleccionada
-            document.getElementById(zoneId).style.visibility = 'visible'; // Asegura que la zona seleccion
-                        document.getElementById(zoneId).style.opacity = '1'; // Muestra la zona seleccionada
-            document.getElementById(zoneId).style.visibility = 'visible'; // Asegura que la zona seleccionada sea visible
+        function showSection(section) {
+            document.getElementById('zone1').style.opacity = '0'; // Desvanece la Zona 1
+            document.getElementById('zone1').style.visibility = 'hidden'; // Oculta la Zona 1
+            document.getElementById('zone2').style.opacity = '0'; // Desvanece la Zona 2
+            document.getElementById('zone2').style.visibility = 'hidden'; // Oculta la Zona 2
+            document.getElementById('zone3').style.opacity = '0'; // Desvanece la Zona 3
+            document.getElementById('zone3').style.visibility = 'hidden'; // Oculta la Zona 3
+            document.getElementById('zone4').style.opacity = '0'; // Desvanece la Zona 4
+            document.getElementById('zone4').style.visibility = 'hidden'; // Oculta la Zona 4
+
+              document.getElementById('zone' + (section === 'analysis' ? '3' : section === 'files' ? '4' : '2')).style.opacity = '1'; // Muestra la sección seleccionada
+            document.getElementById('zone' + (section === 'analysis' ? '3' : section === 'files' ? '4' : '2')).style.visibility = 'visible'; // Asegura que la sección seleccionada sea visible
+        }
+
+        function reloadPage() {
+            document.getElementById('zone1').style.opacity = '1'; // Muestra la Zona 1
+            document.getElementById('zone1').style.visibility = 'visible'; // Asegura que la Zona 1 sea visible
+            document.getElementById('zone2').style.opacity = '0'; // Desvanece la Zona 2
+            document.getElementById('zone2').style.visibility = 'hidden'; // Oculta la Zona 2
+            document.getElementById('zone3').style.opacity = '0'; // Desvanece la Zona 3
+            document.getElementById('zone3').style.visibility = 'hidden'; // Oculta la Zona 3
+            document.getElementById('zone4').style.opacity = '0'; // Desvanece la Zona 4
+            document.getElementById('zone4').style.visibility = 'hidden'; // Oculta la Zona 4
         }
 
         document.addEventListener("DOMContentLoaded", function() {
@@ -248,4 +260,3 @@
     </script>
 </body>
 </html>
-
