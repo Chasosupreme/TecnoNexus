@@ -43,7 +43,7 @@
         .author-info button:hover {
             background-color: #004494;
         }
-        .container, .introduction {
+        .container {
             position: absolute;
             top: 0;
             left: 0;
@@ -53,12 +53,10 @@
             justify-content: center;
             align-items: center;
             transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-        }
-        .container {
             background-color: #333;
             color: #fff;
             text-align: center;
-            z-index: 1;
+            z-index: 2;
             opacity: 1;
             visibility: visible;
             flex-direction: column;
@@ -82,22 +80,29 @@
             background-color: #004494;
         }
         .introduction {
-            overflow: hidden;
-            z-index: 2;
-            opacity: 0;
-            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             text-align: center;
             background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
         }
         .introduction img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+            z-index: -1; /* Coloca la imagen detrás del contenido */
         }
         .introduction-content {
             position: relative;
@@ -150,10 +155,10 @@
             Andrés Felipe Rodríguez López y Víctor Daniel Ramírez de 1001, del Colegio Montferri, crearon esta página.
         </div>
         <div class="author-buttons">
-            <button onclick="alert('Análisis')">Análisis</button>
-            <button onclick="alert('Planeación')">Planeación</button>
-            <button onclick="alert('Ejecución')">Ejecución</button>
-            <button onclick="alert('Evaluación')">Evaluación</button>
+            <button onclick="showSection('analisis')">Análisis</button>
+            <button onclick="showSection('planeacion')">Planeación</button>
+            <button onclick="showSection('ejecucion')">Ejecución</button>
+            <button onclick="showSection('evaluacion')">Evaluación</button>
         </div>
     </div>
 
@@ -165,9 +170,9 @@
 
     <!-- Zona 2: Introducción con imagen -->
     <div class="introduction" id="zone2">
-        <img src="Servidor.jpg" alt="Imagen de Servidor">
+        <img src="static/pictures/Servidor.jpg" alt="Imagen de Servidor">
         <div class="introduction-content">
-            <h1>Introducción</h1>
+            <h1>Buenos días</h1>
             <div class="separator"></div>
             <p>¡Bienvenido a la introducción de TecnoNexus!</p>
             <button onclick="reloadPage()">Volver</button>
@@ -191,6 +196,19 @@
             document.getElementById('zone1').style.visibility = 'visible'; // Asegura que la Zona 1 sea visible
             document.getElementById('zone2').style.opacity = '0'; // Desvanece la Zona 2
             document.getElementById('zone2').style.visibility = 'hidden'; // Oculta la Zona 2
+        }
+
+        function showSection(section) {
+            // Redirige a la sección especificada
+            if (section === 'analisis') {
+                window.location.href = 'analisis.html';
+            } else if (section === 'planeacion') {
+                window.location.href = 'planeacion.html';
+            } else if (section === 'ejecucion') {
+                window.location.href = 'ejecucion.html';
+            } else if (section === 'evaluacion') {
+                window.location.href = 'evaluacion.html';
+            }
         }
 
         document.addEventListener("DOMContentLoaded", function() {
