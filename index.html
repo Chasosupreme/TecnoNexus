@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoNexus - Mantenimiento de Servidores</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .author-info {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .author-info .author-text {
+            flex: 1;
+        }
+        .author-info button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .author-info button:hover {
+            background-color: #004494;
+        }
+        .container, .introduction {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        }
+        .container {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+            opacity: 1;
+            visibility: visible;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .container h1 {
+            font-size: 6em;
+            margin: 0;
+        }
+        .container button {
+            margin-top: 20px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #004494;
+        }
+        .introduction {
+            overflow: hidden;
+            z-index: 2;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .introduction video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .introduction-content {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            z-index: 1;
+        }
+        .introduction-content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .separator {
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(to bottom, #2e2e2e, #4d4d4d);
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+        .introduction-content button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .introduction-content button:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <!-- Información de autores y botones en la parte superior -->
+    <div class="author-info">
+        <div class="author-text">
+            Andrés Felipe Rodríguez López y Víctor Daniel Ramírez de 1001, del Colegio Montferri, crearon esta página.
+        </div>
+        <div class="author-buttons">
+            <button onclick="alert('Análisis')">Análisis</button>
+            <button onclick="alert('Planeación')">Planeación</button>
+            <button onclick="alert('Ejecución')">Ejecución</button>
+            <button onclick="alert('Evaluación')">Evaluación</button>
+        </div>
+    </div>
+
+    <!-- Zona 1: Contenido inicial -->
+    <div class="container" id="zone1">
+        <h1>TecnoNexus</h1>
+        <button onclick="showIntroduction()">Mostrar Introducción</button>
+    </div>
+
+    <!-- Zona 2: Introducción con video -->
+    <div class="introduction" id="zone2">
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename='pictures/video1.mp4') }}" type="video/mp4">
+            Tu navegador no soporta videos en HTML5.
+        </video>
+        <div class="introduction-content">
+            <h1>Introducción</h1>
+            <div class="separator"></div>
+            <p>¡Bienvenido a la introducción de TecnoNexus!</p>
+            <button onclick="reloadPage()">Volver</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TecnoNexus</p>
+    </footer>
+
+    <script>
+        function showIntroduction() {
+            document.getElementById('zone1').style.opacity = '0'; // Desvanece la Zona 1
+            document.getElementById('zone1').style.visibility = 'hidden'; // Oculta la Zona 1
+            document.getElementById('zone2').style.opacity = '1'; // Muestra la Zona 2
+            document.getElementById('zone2').style.visibility = 'visible'; // Asegura que la Zona 2 sea visible
+        }
+
+        function reloadPage() {
+            document.getElementById('zone1').style.opacity = '1'; // Muestra la Zona 1
+            document.getElementById('zone1').style.visibility = 'visible'; // Asegura que la Zona 1 sea visible
+            document.getElementById('zone2').style.opacity = '0'; // Desvanece la Zona 2
+            document.getElementById('zone2').style.visibility = 'hidden'; // Oculta la Zona 2
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('zone2').style.opacity = '0'; // Asegura que la introducción esté oculta al inicio
+            document.getElementById('zone2').style.visibility = 'hidden'; // Asegura que la introducción esté oculta al inicio
+        });
+    </script>
+</body>
+</html>
