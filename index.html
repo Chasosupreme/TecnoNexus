@@ -1,6 +1,3 @@
-Vamos a ajustar el código para incluir la sección de la imagen y eliminar la sección de video. Aquí está el código actualizado:
-
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,8 +12,18 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
             font-family: Arial, sans-serif;
             overflow: hidden;
         }
+        
+        /* Fondo con imagen de Servidores.jpg */
+        body {
+            background-image: url('{{ url_for('static', filename='pictures/Servidores.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
         .author-info {
-            background-color: #444;
+            background-color: rgba(68, 68, 68, 0.8); /* Fondo semi-transparente */
             color: #fff;
             padding: 10px;
             border-radius: 5px;
@@ -46,6 +53,7 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
         .author-info button:hover {
             background-color: #004494;
         }
+
         .container, .introduction, .analysis, .files {
             position: absolute;
             top: 0;
@@ -57,8 +65,8 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
             align-items: center;
             transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
         }
+
         .container {
-            background-color: #333;
             color: #fff;
             text-align: center;
             z-index: 1;
@@ -67,10 +75,12 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
             flex-direction: column;
             padding: 20px;
         }
+
         .container h1 {
             font-size: 6em;
             margin: 0;
         }
+
         .container button {
             margin-top: 20px;
             background-color: #0056b3;
@@ -81,10 +91,12 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
             border-radius: 5px;
             cursor: pointer;
         }
+
         .container button:hover {
             background-color: #004494;
         }
-        .introduction {
+
+        .introduction, .analysis, .files {
             overflow: hidden;
             z-index: 2;
             opacity: 0;
@@ -96,7 +108,8 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
             text-align: center;
             background: rgba(0, 0, 0, 0.6);
         }
-        .introduction-content {
+
+        .introduction-content, .analysis-content, .files-content {
             position: relative;
             width: 80%;
             max-width: 600px;
@@ -106,26 +119,19 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
             color: #fff;
             z-index: 1;
         }
-        .introduction-content h1 {
+
+        .introduction-content h1, .analysis-content h1, .files-content h1 {
             font-size: 3em;
             margin: 0;
         }
+
         .separator {
             width: 80%;
             height: 3px;
             background: linear-gradient(to bottom, #2e2e2e, #4d4d4d);
             margin: 20px 0;
         }
-        .analysis, .files {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            z-index: 2;
-            opacity: 0;
-            visibility: hidden;
-            flex-direction: column;
-            padding: 20px;
-        }
+
         footer {
             background-color: #333;
             color: white;
@@ -135,7 +141,8 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
             bottom: 0;
             text-align: center;
         }
-        .introduction-content button, .analysis button, .files button {
+
+        .introduction-content button, .analysis-content button, .files-content button {
             background-color: #0056b3;
             color: white;
             border: none;
@@ -145,22 +152,9 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
             cursor: pointer;
             margin-top: 20px;
         }
-        .introduction-content button:hover, .analysis button:hover, .files button:hover {
+
+        .introduction-content button:hover, .analysis-content button:hover, .files-content button:hover {
             background-color: #004494;
-        }
-        .files-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .files-content a {
-            margin: 10px;
-            color: #0056b3;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        .files-content a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -171,10 +165,9 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
             Andrés Felipe Rodríguez López y Víctor Daniel Ramírez de 1001, del Colegio Montferri, crearon esta página.
         </div>
         <div class="author-buttons">
+            <button onclick="showSection('introduction')">Introducción</button>
             <button onclick="showSection('analysis')">Análisis</button>
-            <button onclick="showSection('planning')">Planeación</button>
-            <button onclick="showSection('execution')">Ejecución</button>
-            <button onclick="showSection('evaluation')">Evaluación</button>
+            <button onclick="showSection('files')">Archivos</button>
         </div>
     </div>
 
@@ -196,27 +189,25 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
 
     <!-- Zona 3: Análisis -->
     <div class="analysis" id="zone3">
-        <h1>Análisis</h1>
-        <div class="separator"></div>
-        <p><strong>Descripción del problema:</strong> En muchos entornos empresariales, la falta de configuraciones seguras puede resultar en vulnerabilidades explotables.</p>
-        <p><strong>Objetivo del proyecto:</strong> Crear un servidor seguro que reduzca los riesgos mediante prácticas de configuración óptima y medidas de seguridad robustas.</p>
-        <p><strong>Alcance del proyecto:</strong> Implementar configuraciones de servidores seguros, incluyendo instalación de sistemas operativos y servicios esenciales.</p>
-        <p><strong>Lugar de implementación:</strong> Entorno controlado para pruebas y desarrollo.</p>
-        <p><strong>Evidencia fotográfica:</strong> [Aquí se mostrará evidencia fotográfica del proyecto]</p>
-        <p><strong>Infografía (marco teórico):</strong> [Aquí se incluirá la infografía correspondiente]</p>
-        <p><strong>Formato de acuerdo y consentimiento:</strong> [Aquí se mostrará el formato de acuerdo y consentimiento]</p>
-        <button onclick="reloadPage()">Volver</button>
+        <div class="analysis-content">
+            <h1>Análisis</h1>
+            <div class="separator"></div>
+            <p>Aquí se describirá el análisis del proyecto.</p>
+            <button onclick="reloadPage()">Volver</button>
+        </div>
     </div>
 
     <!-- Zona 4: Archivos -->
     <div class="files" id="zone4">
-        <h1>Archivos del Proyecto</h1>
         <div class="files-content">
-            <a href="{{ url_for('static', filename='audio/proyecto_audio.mp3') }}" download>Descargar Audio del Proyecto</a>
-            <a href="{{ url_for('static', filename='files/proyecto_espanol.pdf') }}" download>Descargar Proyecto en Español</a>
-            <a href="{{ url_for('static', filename='files/proyecto_ingles.pdf') }}" download>Descargar Proyecto en Inglés</a>
+            <h1>Archivos</h1>
+            <div class="separator"></div>
+            <p>Aquí se pueden descargar los archivos del proyecto.</p>
+            <a href="{{ url_for('static', filename='files/audio.mp3') }}" download>Descargar Audio</a><br>
+            <a href="{{ url_for('static', filename='files/proyecto_es.pdf') }}" download>Descargar Proyecto en Español</a><br>
+            <a href="{{ url_for('static', filename='files/proyecto_en.pdf') }}" download>Descargar Proyecto en Inglés</a>
+            <button onclick="reloadPage()">Volver</button>
         </div>
-        <button onclick="reloadPage()">Volver</button>
     </div>
 
     <footer>
@@ -225,37 +216,39 @@ Vamos a ajustar el código para incluir la sección de la imagen y eliminar la s
 
     <script>
         function showSection(section) {
-            document.getElementById('zone1').style.opacity = '0'; // Desvanece la Zona 1
-            document.getElementById('zone1').style.visibility = 'hidden'; // Oculta la Zona 1
-            document.getElementById('zone2').style.opacity = '0'; // Desvanece la Zona 2
-            document.getElementById('zone2').style.visibility = 'hidden'; // Oculta la Zona 2
-            document.getElementById('zone3').style.opacity = '0'; // Desvanece la Zona 3
-            document.getElementById('zone3').style.visibility = 'hidden'; // Oculta la Zona 3
-            document.getElementById('zone4').style.opacity = '0'; // Desvanece la Zona 4
-            document.getElementById('zone4').style.visibility = 'hidden'; // Oculta la Zona 4
+            // Oculta todas las secciones
+            document.getElementById('zone1').style.opacity = '0';
+            document.getElementById('zone1').style.visibility = 'hidden';
+            document.getElementById('zone2').style.opacity = '0';
+            document.getElementById('zone2').style.visibility = 'hidden';
+            document.getElementById('zone3').style.opacity = '0';
+            document.getElementById('zone3').style.visibility = 'hidden';
+            document.getElementById('zone4').style.opacity = '0';
+            document.getElementById('zone4').style.visibility = 'hidden';
 
-              document.getElementById('zone' + (section === 'analysis' ? '3' : section === 'files' ? '4' : '2')).style.opacity = '1'; // Muestra la sección seleccionada
-            document.getElementById('zone' + (section === 'analysis' ? '3' : section === 'files' ? '4' : '2')).style.visibility = 'visible'; // Asegura que la sección seleccionada sea visible
+            // Muestra la sección seleccionada
+            document.getElementById('zone' + (section === 'analysis' ? '3' : section === 'files' ? '4' : '2')).style.opacity = '1';
+            document.getElementById('zone' + (section === 'analysis' ? '3' : section === 'files' ? '4' : '2')).style.visibility = 'visible';
         }
 
         function reloadPage() {
-            document.getElementById('zone1').style.opacity = '1'; // Muestra la Zona 1
-            document.getElementById('zone1').style.visibility = 'visible'; // Asegura que la Zona 1 sea visible
-            document.getElementById('zone2').style.opacity = '0'; // Desvanece la Zona 2
-            document.getElementById('zone2').style.visibility = 'hidden'; // Oculta la Zona 2
-            document.getElementById('zone3').style.opacity = '0'; // Desvanece la Zona 3
-            document.getElementById('zone3').style.visibility = 'hidden'; // Oculta la Zona 3
-            document.getElementById('zone4').style.opacity = '0'; // Desvanece la Zona 4
-            document.getElementById('zone4').style.visibility = 'hidden'; // Oculta la Zona 4
+            document.getElementById('zone1').style.opacity = '1';
+            document.getElementById('zone1').style.visibility = 'visible';
+            document.getElementById('zone2').style.opacity = '0';
+            document.getElementById('zone2').style.visibility = 'hidden';
+            document.getElementById('zone3').style.opacity = '0';
+            document.getElementById('zone3').style.visibility = 'hidden';
+            document.getElementById('zone4').style.opacity = '0';
+            document.getElementById('zone4').style.visibility = 'hidden';
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById('zone2').style.opacity = '0'; // Asegura que la introducción esté oculta al inicio
-            document.getElementById('zone2').style.visibility = 'hidden'; // Asegura que la introducción esté oculta al inicio
-            document.getElementById('zone3').style.opacity = '0'; // Asegura que el análisis esté oculto al inicio
-            document.getElementById('zone3').style.visibility = 'hidden'; // Asegura que el análisis esté oculto al inicio
-            document.getElementById('zone4').style.opacity = '0'; // Asegura que la sección de archivos esté oculta al inicio
-            document.getElementById('zone4').style.visibility = 'hidden'; // Asegura que la sección de archivos esté oculta al inicio
+            document.getElementById('zone2').style.opacity = '0';
+            document.getElementById('zone2').style.visibility = 'hidden';
+            document.getElementById('zone3').style.opacity = '0';
+            document.getElementById('zone3').style.visibility = 'hidden';
+            document.getElementById('zone4').style.opacity = '0';
+            document.getElementById('zone4').style.visibility = 'hidden';
         });
     </script>
 </body>
