@@ -3,253 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoNexus - Mantenimiento de Servidores</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-        
-        /* Fondo con imagen de Servidores.jpg */
-        body {
-            background-image: url('{{ url_for('static', filename='pictures/Servidores.jpg') }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        .author-info {
-            background-color: rgba(68, 68, 68, 0.8); /* Fondo semi-transparente */
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            z-index: 10;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .author-info .author-text {
-            flex: 1;
-        }
-        .author-info button {
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 0 5px;
-        }
-        .author-info button:hover {
-            background-color: #004494;
-        }
-
-        .container, .introduction, .analysis, .files {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-        }
-
-        .container {
-            color: #fff;
-            text-align: center;
-            z-index: 1;
-            opacity: 1;
-            visibility: visible;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        .container h1 {
-            font-size: 6em;
-            margin: 0;
-        }
-
-        .container button {
-            margin-top: 20px;
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .container button:hover {
-            background-color: #004494;
-        }
-
-        .introduction, .analysis, .files {
-            overflow: hidden;
-            z-index: 2;
-            opacity: 0;
-            visibility: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .introduction-content, .analysis-content, .files-content {
-            position: relative;
-            width: 80%;
-            max-width: 600px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            color: #fff;
-            z-index: 1;
-        }
-
-        .introduction-content h1, .analysis-content h1, .files-content h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-
-        .separator {
-            width: 80%;
-            height: 3px;
-            background: linear-gradient(to bottom, #2e2e2e, #4d4d4d);
-            margin: 20px 0;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            text-align: center;
-        }
-
-        .introduction-content button, .analysis-content button, .files-content button {
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .introduction-content button:hover, .analysis-content button:hover, .files-content button:hover {
-            background-color: #004494;
-        }
-    </style>
+    <title>TecnoNexus</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Información de autores y botones en la parte superior -->
-    <div class="author-info">
-        <div class="author-text">
-            Andrés Felipe Rodríguez López y Víctor Daniel Ramírez de 1001, del Colegio Montferri, crearon esta página.
-        </div>
-        <div class="author-buttons">
-            <button onclick="showSection('introduction')">Introducción</button>
-            <button onclick="showSection('analysis')">Análisis</button>
-            <button onclick="showSection('files')">Archivos</button>
-        </div>
-    </div>
+    <!-- Imagen principal y encabezado -->
+    <header>
+        <img src="servidores.jpg" alt="Imagen de servidores" class="header-image">
+        <h1>Tecno Nexus</h1>
+        <p>Andrés y Víctor crearon esta página</p>
+    </header>
 
-    <!-- Zona 1: Contenido inicial -->
-    <div class="container" id="zone1">
-        <h1>TecnoNexus</h1>
-        <button onclick="showSection('introduction')">Mostrar Introducción</button>
-    </div>
+    <!-- Menú de navegación superior -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Introducción</a></li>
+            <li><a href="#">Análisis</a></li>
+            <li><a href="#">Planeación</a></li>
+            <li><a href="#">Ejecución</a></li>
+            <li><a href="#">Evaluación</a></li>
+        </ul>
+    </nav>
 
-    <!-- Zona 2: Introducción -->
-    <div class="introduction" id="zone2">
-        <div class="introduction-content">
-            <h1>Introducción</h1>
-            <div class="separator"></div>
-            <p>¡Bienvenido a la introducción de TecnoNexus!</p>
-            <button onclick="reloadPage()">Volver</button>
-        </div>
-    </div>
-
-    <!-- Zona 3: Análisis -->
-    <div class="analysis" id="zone3">
-        <div class="analysis-content">
-            <h1>Análisis</h1>
-            <div class="separator"></div>
-            <p>Aquí se describirá el análisis del proyecto.</p>
-            <button onclick="reloadPage()">Volver</button>
-        </div>
-    </div>
-
-    <!-- Zona 4: Archivos -->
-    <div class="files" id="zone4">
-        <div class="files-content">
-            <h1>Archivos</h1>
-            <div class="separator"></div>
-            <p>Aquí se pueden descargar los archivos del proyecto.</p>
-            <a href="{{ url_for('static', filename='files/audio.mp3') }}" download>Descargar Audio</a><br>
-            <a href="{{ url_for('static', filename='files/proyecto_es.pdf') }}" download>Descargar Proyecto en Español</a><br>
-            <a href="{{ url_for('static', filename='files/proyecto_en.pdf') }}" download>Descargar Proyecto en Inglés</a>
-            <button onclick="reloadPage()">Volver</button>
-        </div>
-    </div>
-
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2024 TecnoNexus</p>
+        <p>Todos los derechos reservados a TecnoNexus</p>
     </footer>
-
-    <script>
-        function showSection(section) {
-            // Oculta todas las secciones
-            document.getElementById('zone1').style.opacity = '0';
-            document.getElementById('zone1').style.visibility = 'hidden';
-            document.getElementById('zone2').style.opacity = '0';
-            document.getElementById('zone2').style.visibility = 'hidden';
-            document.getElementById('zone3').style.opacity = '0';
-            document.getElementById('zone3').style.visibility = 'hidden';
-            document.getElementById('zone4').style.opacity = '0';
-            document.getElementById('zone4').style.visibility = 'hidden';
-
-            // Muestra la sección seleccionada
-            document.getElementById('zone' + (section === 'analysis' ? '3' : section === 'files' ? '4' : '2')).style.opacity = '1';
-            document.getElementById('zone' + (section === 'analysis' ? '3' : section === 'files' ? '4' : '2')).style.visibility = 'visible';
-        }
-
-        function reloadPage() {
-            document.getElementById('zone1').style.opacity = '1';
-            document.getElementById('zone1').style.visibility = 'visible';
-            document.getElementById('zone2').style.opacity = '0';
-            document.getElementById('zone2').style.visibility = 'hidden';
-            document.getElementById('zone3').style.opacity = '0';
-            document.getElementById('zone3').style.visibility = 'hidden';
-            document.getElementById('zone4').style.opacity = '0';
-            document.getElementById('zone4').style.visibility = 'hidden';
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById('zone2').style.opacity = '0';
-            document.getElementById('zone2').style.visibility = 'hidden';
-            document.getElementById('zone3').style.opacity = '0';
-            document.getElementById('zone3').style.visibility = 'hidden';
-            document.getElementById('zone4').style.opacity = '0';
-            document.getElementById('zone4').style.visibility = 'hidden';
-        });
-    </script>
 </body>
 </html>
