@@ -99,6 +99,55 @@ header {
     line-height: 1.6;
     color: #ffffff; /* Texto en blanco para contraste */
 }
+/* Estilo para la sección de análisis */
+.section-analisis {
+    background: linear-gradient(135deg, #000000, #4b0082); /* Negro a morado oscuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.analisis-header {
+    color: #ffffff; /* Color del encabezado */
+    margin-bottom: 20px;
+}
+
+.analisis-dialog {
+    background-color: rgba(128, 128, 128, 0.3); /* Gris transparente */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center;
+}
+
+.analisis-body {
+    margin-bottom: 20px;
+    color: #ffffff; /* Color del texto */
+}
+
+.analisis-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-documento, .btn-audio {
+    background-color: #4b0082; /* Morado oscuro para botones */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-documento:hover, .btn-audio:hover {
+    background-color: #3a006a; /* Color al pasar el mouse */
+}
+
 
 /* Pie de página */
 footer {
