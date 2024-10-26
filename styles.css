@@ -1,0 +1,68 @@
+/* Configuración de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Imagen y encabezado */
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Menú de navegación */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
