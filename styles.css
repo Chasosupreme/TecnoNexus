@@ -79,9 +79,9 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* Estilos para la sección de introducción */
+/* Estilo para la sección de introducción con degradado */
 .section-intro {
-    background-color: #111;
+    background: linear-gradient(135deg, #000000, #4b0082); /* Negro a morado oscuro */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,8 +97,8 @@ header {
     text-align: center;
     font-size: 1.2rem;
     line-height: 1.6;
+    color: #ffffff; /* Texto en blanco para contraste */
 }
-
 
 /* Pie de página */
 footer {
