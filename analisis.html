@@ -148,43 +148,48 @@
 </div>
 
 
-<div class="contenido" id="problema">
-    <h2>1.3 Formulación del Problema</h2>
-    <p>
-        A pesar de la creciente dependencia de las tecnologías de red, muchas personas aún desconocen cómo funcionan los servidores, el sistema de nombres de dominio (DNS) y los proxys. Esta falta de conocimiento genera confusión al momento de configurar, utilizar o incluso comprender los servicios digitales más comunes. Además, la poca visibilidad de estos temas en espacios educativos o de divulgación técnica limita el acceso a soluciones eficientes y seguras.<br><br>
-        Por ello, se hace necesario implementar estrategias de formación, acompañamiento y divulgación que permitan acercar estos conceptos a un público más amplio y facilitar su comprensión a través de prácticas guiadas y herramientas visuales.
-    </p>
-</div>
-
 <div class="contenido" id="objetivos">
-    <h2>1.4 Objetivos</h2>
-    
-    <div style="margin-top: 20px;">
-        <button onclick="mostrarObjetivo('general')" style="margin-right: 10px; padding: 10px 15px; background-color: #444; color: white; border: none; border-radius: 5px; cursor: pointer;">
-            Objetivo General
-        </button>
-        <button onclick="mostrarObjetivo('especifico')" style="padding: 10px 15px; background-color: #444; color: white; border: none; border-radius: 5px; cursor: pointer;">
-            Objetivos Específicos
-        </button>
-    </div>
+  <h2>1.4 Objetivos</h2>
 
-    <div id="objetivo-general" style="display: none; margin-top: 20px;">
-        <h3>Objetivo General</h3>
-        <p>
-            Brindar una comprensión clara y práctica sobre el funcionamiento de los servidores, proxys y servicios DNS, a través de experiencias educativas y técnicas que permitan al usuario reconocer su importancia, configuración y aplicaciones en el entorno digital actual.
-        </p>
-    </div>
+  <div style="margin-top: 20px;">
+    <button onclick="mostrarObjetivo('general')" style="margin-right: 10px; padding: 10px 15px; background-color: #444; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Objetivo General
+    </button>
+    <button onclick="mostrarObjetivo('especifico')" style="padding: 10px 15px; background-color: #444; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Objetivos Específicos
+    </button>
+  </div>
 
-    <div id="objetivo-especifico" style="display: none; margin-top: 20px;">
-        <h3>Objetivos Específicos</h3>
-        <ul style="padding-left: 20px; list-style-type: disc;">
-            <li>Identificar las funciones principales de los servidores, proxys y servicios DNS en un entorno de red.</li>
-            <li>Diseñar sesiones prácticas que permitan una exploración guiada sobre la configuración y el uso de estos componentes.</li>
-            <li>Fomentar la divulgación de estos temas a través de herramientas digitales, redes sociales o espacios educativos.</li>
-            <li>Promover el trabajo colaborativo y el reparto de responsabilidades para facilitar el aprendizaje y la puesta en práctica de los conocimientos adquiridos.</li>
-        </ul>
-    </div>
+  <div id="objetivo-general" style="display: none; margin-top: 20px;">
+    <h3>Objetivo General</h3>
+    <p>
+      Brindar una comprensión clara y práctica sobre el funcionamiento de los servidores, proxys y servicios DNS, a través de experiencias educativas y técnicas que permitan al usuario reconocer su importancia, configuración y aplicaciones en el entorno digital actual.
+    </p>
+  </div>
+
+  <div id="objetivo-especifico" style="display: none; margin-top: 20px;">
+    <h3>Objetivos Específicos</h3>
+    <ul style="padding-left: 20px; list-style-type: disc;">
+      <li>Identificar las funciones principales de los servidores, proxys y servicios DNS en un entorno de red.</li>
+      <li>Diseñar sesiones prácticas que permitan una exploración guiada sobre la configuración y el uso de estos componentes.</li>
+      <li>Fomentar la divulgación de estos temas a través de herramientas digitales, redes sociales o espacios educativos.</li>
+      <li>Promover el trabajo colaborativo y el reparto de responsabilidades para facilitar el aprendizaje y la puesta en práctica de los conocimientos adquiridos.</li>
+    </ul>
+  </div>
 </div>
+
+<script>
+  function mostrarObjetivo(tipo) {
+    document.getElementById("objetivo-general").style.display = "none";
+    document.getElementById("objetivo-especifico").style.display = "none";
+
+    if (tipo === "general") {
+      document.getElementById("objetivo-general").style.display = "block";
+    } else if (tipo === "especifico") {
+      document.getElementById("objetivo-especifico").style.display = "block";
+    }
+  }
+</script>
 
   <div class="contenido" id="alcance">
     <h2>1.5 Alcance del Proyecto</h2>
