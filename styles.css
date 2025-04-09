@@ -1,219 +1,201 @@
-/* Configuración de estilos básicos */
+/* ░░░░░░ CONFIGURACIÓN GLOBAL ░░░░░░ */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-font-family: Arial, sans-serif;
-color: #fff;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
-/* Encabezado superior */
-header {
-display: flex;
-flex-direction: column;
-align-items: center;
-background-color: rgba(0, 0, 0, 0.5);
-padding: 10px 20px;
-width: 100%;
-position: fixed;
-top: 0;
-z-index: 1;
+/* ░░░░░░ INDEX ░░░░░░ */
+.pagina-inicio {
+  background: url('servidores.jpg') center/cover no-repeat fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding-bottom: 60px; /* espacio para el footer */
 }
 
-/* Cuadro negro para el texto "Andrés y Víctor" */
-.top-text {
-background-color: rgba(0, 0, 0, 0.8);
-color: #fff;
-padding: 5px 10px;
-border-radius: 5px;
-text-align: center;
-margin-bottom: 10px;
+.pagina-inicio h1 {
+  font-size: 4rem;
+  text-shadow: 2px 2px 10px black;
 }
 
-/* Menú de navegación */
-.menu {
-display: flex;
-gap: 15px;
+.pagina-inicio footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
 }
 
-.menu li {
-list-style: none;
-}
-
-.menu a {
-color: #fff;
-text-decoration: none;
-padding: 10px;
-font-size: 1rem;
-transition: background 0.3s;
-}
-
-.menu a:hover {
-background-color: rgba(255, 255, 255, 0.3);
-border-radius: 5px;
-}
-
-/* Imagen de fondo y texto central */
-.background {
-background: url('servidores.jpg') no-repeat center center fixed;
-background-size: cover;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.center-text {
-font-size: 4rem;
-color: #fff;
-text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-/* Estilo para la sección de introducción con degradado */
-.section-intro {
-background: linear-gradient(135deg, #000000, #4b0082); /* Negro a morado oscuro */
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100vh;
-padding: 20px;
+/* ░░░░░░ INTRODUCCIÓN ░░░░░░ */
+.pagina-intro {
+  background: linear-gradient(135deg, #000000, #1a002b); /* Negro a morado oscuro */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 60px;
+  text-align: center;
 }
 
 .intro-dialog {
-background-color: rgba(0, 0, 0, 0.8);
-padding: 20px;
-border-radius: 8px;
-max-width: 600px;
-text-align: center;
-font-size: 1.2rem;
-line-height: 1.6;
-color: #ffffff; /* Texto en blanco para contraste */
-}
-/* Estilo para la sección de análisis */
-.section-analisis {
-background: linear-gradient(135deg, #000000, #4b0082); /* Negro a morado oscuro */
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-height: 100vh;
-padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-.analisis-header {
-color: #ffffff; /* Color del encabezado */
-margin-bottom: 20px;
+.pagina-intro footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
 }
 
-.analisis-dialog {
-background-color: rgba(128, 128, 128, 0.5); /* Gris transparente más visible */
-padding: 30px; /* Mayor espacio interno */
-border-radius: 8px;
-max-width: 800px;
-width: 100%; /* Ocupa todo el ancho */
-text-align: center;
+/* ░░░░░░ ANÁLISIS ░░░░░░ */
+.pagina-analisis {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(75, 0, 130, 0.6)), url('rayos-fondo.jpg') center/cover no-repeat fixed;
+  padding-top: 60px;
 }
 
-.analisis-body {
-margin-bottom: 20px;
-color: #ffffff; /* Color del texto */
+/* Header arriba sin tocar el menú */
+.pagina-analisis header {
+  position: fixed;
+  top: 0;
+  left: 250px; /* para no pisar el menú */
+  right: 0;
+  height: 60px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  z-index: 10;
 }
 
-.analisis-buttons {
-display: flex;
-justify-content: center; /* Centramos los botones */
-gap: 20px; /* Espacio entre botones */
-}
-
-.btn-documento, .btn-audio {
-background-color: #4b0082; /* Morado oscuro para botones */
-color: #ffffff;
-border: none;
-border-radius: 5px;
-padding: 15px 30px; /* Botones más grandes */
-font-size: 1.2rem; /* Tamaño de fuente más grande */
-cursor: pointer;
-transition: background-color 0.3s ease;
-}
-
-.btn-documento:hover, .btn-audio:hover {
-background-color: #3a006a; /* Color al pasar el mouse */
-}
-
-/* Contenedor de la fase de análisis */
-.analisis-container {
-    display: flex;
-    margin-top: 60px; /* Espacio para la barra de navegación fija */
-}
-
-/* Estilo del menú lateral */
+/* Menú lateral izquierdo */
 .menu-lateral {
-    width: 250px;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    position: fixed;
-    height: 100vh;
+  width: 250px;
+  background: #000;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .menu-lateral ul {
-    list-style: none;
+  list-style: none;
 }
 
 .menu-lateral li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .menu-lateral a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    border-radius: 5px;
-    transition: background 0.3s;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 .menu-lateral a:hover {
-    background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Contenido principal */
+/* Contenido principal a la derecha */
 .contenido {
-    margin-left: 270px;
-    padding: 20px;
-    display: none; /* Ocultar todas las secciones por defecto */
+  margin-left: 250px;
+  padding: 80px 30px 60px;
+  flex: 1;
 }
 
 .contenido h2 {
-    color: white;
+  color: white;
+  margin-bottom: 15px;
 }
 
 .contenido p {
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    border-radius: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 5px;
+  line-height: 1.6;
 }
 
+.pagina-analisis footer {
+  position: fixed;
+  bottom: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+}
 
+/* Botones del header */
+header .menu-superior {
+  display: flex;
+  gap: 15px;
+}
 
-/* Pie de página */
-footer {
-text-align: center;
-padding: 10px;
-background-color: #333;
-color: #fff;
-position: fixed;
-width: 100%;
-bottom: 0;
-font-size: 0.9rem;
+header .menu-superior a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: #4b0082;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+header .menu-superior a:hover {
+  background: #3a006a;
+}
+
+/* ░░░░░░ RESPONSIVE ░░░░░░ */
+@media screen and (max-width: 768px) {
+  .pagina-analisis {
+    flex-direction: column;
+  }
+
+  .menu-lateral {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .contenido {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .pagina-analisis header {
+    left: 0;
+  }
+
+  .pagina-analisis footer {
+    left: 0;
+    width: 100%;
+  }
 }
