@@ -53,9 +53,9 @@ header {
 .pagina-analisis {
   padding-top: 80px;
   background-color: #0d0d0d;
+  overflow-x: hidden;
 }
 
-/* Estilo del contenido en análisis (con rayos) */
 .pagina-analisis .contenido {
   margin-left: 270px;
   padding: 40px;
@@ -73,27 +73,35 @@ header {
   margin-top: 60px;
 }
 
-/* Página de Inicio (index) */
-.pagina-inicio {
-  height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(75, 0, 130, 0.8)), url('servidores.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Footer alineado con contenido en análisis */
+.pagina-analisis footer {
+  margin-left: 270px;
+}
 
-/* Página de Introducción */
+/* ░░░░░░ EFECTO ENERGÍA PARA INDEX E INTRODUCCIÓN ░░░░░░ */
+@keyframes energia {
+  0% {
+    background-position: 40% 40%;
+  }
+  50% {
+    background-position: 60% 60%;
+  }
+  100% {
+    background-position: 40% 40%;
+  }
+}
+
+.pagina-inicio,
 .pagina-intro {
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(75, 0, 130, 0.8)), url('servidores.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
+  background: radial-gradient(circle at 40% 40%, #4b0082 0%, #000000 100%);
+  background-size: 200% 200%;
+  animation: energia 10s ease-in-out infinite;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
 /* ░░░░░░ FOOTER BONITO ░░░░░░ */
 footer {
