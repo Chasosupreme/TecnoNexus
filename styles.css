@@ -8,8 +8,6 @@
 body {
   font-family: Arial, sans-serif;
   color: #fff;
-  padding-top: 80px;
-  background-color: #0d0d0d;
 }
 
 /* ░░░░░░ HEADER FIJO ░░░░░░ */
@@ -49,8 +47,16 @@ header {
   border-radius: 5px;
 }
 
-/* ░░░░░░ CONTENIDO CON FONDO COOL ░░░░░░ */
-.contenido {
+/* ░░░░░░ ESTILOS POR PÁGINA ░░░░░░ */
+
+/* Página de Análisis */
+.pagina-analisis {
+  padding-top: 80px;
+  background-color: #0d0d0d;
+}
+
+/* Estilo del contenido en análisis (con rayos) */
+.pagina-analisis .contenido {
   margin-left: 270px;
   padding: 40px;
   min-height: 100vh;
@@ -63,8 +69,22 @@ header {
   border-left: 1px solid #333;
 }
 
-.contenido h2:first-of-type {
+.pagina-analisis .contenido h2:first-of-type {
   margin-top: 60px;
+}
+
+/* Página de Inicio (index) */
+.pagina-inicio {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #000000, #1a001a);
+}
+
+/* Página de Introducción */
+.pagina-intro {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #000000, #1a001a);
 }
 
 /* ░░░░░░ FOOTER BONITO ░░░░░░ */
