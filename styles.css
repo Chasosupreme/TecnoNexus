@@ -1,258 +1,79 @@
-/* Configuración de estilos básicos */
+/* ░░░░░░ CONFIGURACIÓN BÁSICA ░░░░░░ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  padding-top: 80px;
+  background-color: #0d0d0d;
 }
 
-/* Encabezado superior */
+/* ░░░░░░ HEADER FIJO ░░░░░░ */
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Cuadro negro para el texto "Andrés y Víctor" */
-.top-text {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* Menú de navegación */
+/* ░░░░░░ MENÚ SUPERIOR ░░░░░░ */
 .menu {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .menu li {
-    list-style: none;
+  list-style: none;
 }
 
 .menu a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 1rem;
-    transition: background 0.3s;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1rem;
+  transition: background 0.3s;
 }
 
 .menu a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
 }
 
-/* Imagen de fondo y texto central */
-.background {
-    background: url('servidores.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.center-text {
-    font-size: 4rem;
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-/* Estilo para la sección de introducción con degradado */
-.section-intro {
-    background: linear-gradient(135deg, #000000, #4b0082); /* Negro a morado oscuro */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
-}
-
-.intro-dialog {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #ffffff; /* Texto en blanco para contraste */
-}
-/* Estilo para la sección de análisis */
-.section-analisis {
-    background: linear-gradient(135deg, #000000, #4b0082); /* Negro a morado oscuro */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
-}
-
-.analisis-header {
-    color: #ffffff; /* Color del encabezado */
-    margin-bottom: 20px;
-}
-
-.analisis-dialog {
-    background-color: rgba(128, 128, 128, 0.5); /* Gris transparente más visible */
-    padding: 30px; /* Mayor espacio interno */
-    border-radius: 8px;
-    max-width: 800px;
-    width: 100%; /* Ocupa todo el ancho */
-    text-align: center;
-}
-
-.analisis-body {
-    margin-bottom: 20px;
-    color: #ffffff; /* Color del texto */
-}
-
-.analisis-buttons {
-    display: flex;
-    justify-content: center; /* Centramos los botones */
-    gap: 20px; /* Espacio entre botones */
-}
-
-.btn-documento, .btn-audio {
-    background-color: #4b0082; /* Morado oscuro para botones */
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 15px 30px; /* Botones más grandes */
-    font-size: 1.2rem; /* Tamaño de fuente más grande */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-documento:hover, .btn-audio:hover {
-    background-color: #3a006a; /* Color al pasar el mouse */
-}
-
-/* Contenedor de la fase de análisis */
-.analisis-container {
-    display: flex;
-    margin-top: 60px; /* Espacio para la barra de navegación fija */
-}
-
-/* Estilo del menú lateral */
-.menu-lateral {
-    width: 250px;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    position: fixed;
-    height: 100vh;
-}
-
-.menu-lateral ul {
-    list-style: none;
-}
-
-.menu-lateral li {
-    margin-bottom: 10px;
-}
-
-.menu-lateral a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.menu-lateral a:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-/* Contenido principal */
+/* ░░░░░░ CONTENIDO CON FONDO COOL ░░░░░░ */
 .contenido {
-    margin-left: 270px;
-    padding: 20px;
-    display: none; /* Ocultar todas las secciones por defecto */
+  margin-left: 270px;
+  padding: 40px;
+  min-height: 100vh;
+  display: none;
+  color: white;
+  background: radial-gradient(circle at 30% 30%, rgba(75, 0, 130, 0.08), #0d0d0d 85%),
+              url('rayos-fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+  border-left: 1px solid #333;
 }
 
-.contenido h2 {
-    color: white;
+.contenido h2:first-of-type {
+  margin-top: 60px;
 }
 
-.contenido p {
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    border-radius: 5px;
-}
-
-
-
-/* Pie de página */
+/* ░░░░░░ FOOTER BONITO ░░░░░░ */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    font-size: 0.9rem;
-}
-/* Header fijo con fondo transparente */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    backdrop-filter: blur(6px);
-}
-
-/* Espacio para que el contenido no se esconda debajo del header */
-body {
-    padding-top: 80px;
-}
-
-/* Fondo visual mejorado para secciones */
-.contenido {
-    background: radial-gradient(circle at 30% 30%, rgba(75, 0, 130, 0.08), #0d0d0d 85%),
-                url('rayos-fondo.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    margin-left: 280px;
-    padding: 40px;
-    min-height: 100vh;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
-    border-left: 1px solid #333;
-}
-
-/* Footer mejorado */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1a1a1a;
-    color: #ccc;
-    font-size: 0.9rem;
-    margin-top: 80px;
-    border-top: 1px solid #444;
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 80px;
+  border-top: 1px solid #444;
 }
