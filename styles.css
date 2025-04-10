@@ -112,6 +112,7 @@ body.pagina-intro {
 
 /* Menú lateral izquierdo */
 .menu-lateral {
+  overflow-y: auto;
   width: 250px;
   background: #000;
   height: 100vh;
