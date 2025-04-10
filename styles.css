@@ -10,6 +10,24 @@ body {
   color: white;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* Agrega este espaciador para que el contenido no quede tapado por el header */
+body.pagina-inicio,
+body.pagina-intro {
+  padding-top: 60px;
+}
+
 /* ░░░░░░ INDEX ░░░░░░ */
 .pagina-inicio {
   background: url('servidores.jpg') center/cover no-repeat fixed;
@@ -170,13 +188,13 @@ header .menu a {
   color: white;
   text-decoration: none;
   padding: 8px 12px;
-  background: #4b0082;
+  background: #000;
   border-radius: 5px;
   transition: background 0.3s;
 }
 
 header .menu a:hover {
-  background: #3a006a;
+  background: #333;
 }
 
 /* ░░░░░░ RESPONSIVE ░░░░░░ */
