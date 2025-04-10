@@ -178,13 +178,26 @@ body.pagina-intro {
   padding: 10px;
 }
 
-/* Botones del header */
-header .menu {
+/* Barra del menú superior */
+.barra-navegacion {
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  width: 100%;
 }
 
-header .menu a {
+/* Estilo de botones del menú */
+.menu {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
   color: white;
   text-decoration: none;
   padding: 8px 12px;
@@ -193,7 +206,7 @@ header .menu a {
   transition: background 0.3s;
 }
 
-header .menu a:hover {
+.menu a:hover {
   background: #333;
 }
 
