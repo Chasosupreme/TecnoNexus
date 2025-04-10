@@ -190,14 +190,13 @@ body.pagina-intro {
 }
 
 .pagina-analisis footer {
-  position: fixed;
-  bottom: 0;
-  left: 250px;
-  width: calc(100% - 250px);
+  position: static;
   background: #000;
   color: #ccc;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 1px solid #444;
 }
 
 /* Barra del menú superior */
@@ -230,25 +229,6 @@ body.pagina-intro {
 
 .menu a:hover {
   background: #333;
-
-  .boton-conclusiones {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #4b0082;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  z-index: 9999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease;
-}
-
-.boton-conclusiones:hover {
-  background-color: #3a006a;
 }
 
 }
