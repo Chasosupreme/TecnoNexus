@@ -95,11 +95,10 @@ body.pagina-intro {
   padding-top: 60px;
 }
 
-/* Header arriba sin tocar el menú */
 .pagina-analisis header {
   position: fixed;
   top: 0;
-  left: 250px; /* para no pisar el menú */
+  left: 250px;
   right: 0;
   height: 60px;
   background: #000;
@@ -148,6 +147,7 @@ body.pagina-intro {
   margin-left: 250px;
   padding: 80px 30px 60px;
   flex: 1;
+  overflow: hidden;
 }
 
 .contenido h2 {
