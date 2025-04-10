@@ -111,35 +111,54 @@ body.pagina-intro {
 
 /* Menú lateral izquierdo */
 .menu-lateral {
-  overflow-y: auto;
-  width: 250px;
-  background: #000;
-  height: 100vh;
-  padding: 20px;
   position: fixed;
-  top: 0;
+  top: 60px; /* debajo del header */
   left: 0;
+  width: 250px;
+  height: calc(100vh - 60px); /* espacio exacto debajo del header */
+  background: #000;
+  padding: 10px 15px;
+  overflow-y: auto;
+  font-size: 0.95rem; /* texto un poco más compacto */
+  scrollbar-width: thin; /* Firefox */
+}
+
+/* Estilo para scrollbar bonito (Chrome, Edge, Opera) */
+.menu-lateral::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-lateral::-webkit-scrollbar-thumb {
+  background: #4b0082;
+  border-radius: 3px;
+}
+
+.menu-lateral::-webkit-scrollbar-track {
+  background: #111;
 }
 
 .menu-lateral ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu-lateral li {
-  margin-bottom: 10px;
+  margin-bottom: 8px; /* más compacto */
 }
 
 .menu-lateral a {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 8px 10px;
   display: block;
-  border-radius: 5px;
+  border-radius: 4px;
   transition: background 0.3s;
+  font-size: 0.95rem;
 }
 
 .menu-lateral a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* Contenido principal a la derecha */
