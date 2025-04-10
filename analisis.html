@@ -123,10 +123,16 @@
     </ul>
   </div>
 
-  <div class="contenido" id="introduccion">
-    <h2>¿Quiénes Somos?</h2>
-    <p>Nosotros somos una línea de acción conformada por dos estudiantes del colegio Montferri. Tenemos como meta personal el llevarnos un gran aprendizaje para mejorar a futuro y seguir con nuestras prácticas en el SENA.</p>
-  </div>
+<div class="contenido" id="introduccion">
+  <h2>¿Quiénes Somos?</h2>
+  <p>
+    Somos Andrés Rodríguez y Víctor Ramírez, estudiantes del Colegio Montferri. Este proyecto forma parte de nuestro proceso de formación técnica, y lo hemos desarrollado con el objetivo de adquirir experiencia en la instalación y configuración de servidores, así como en la administración de servicios en red.
+    <br><br>
+    Nos interesa aprender de forma práctica cómo funciona la infraestructura tecnológica que sostiene los servicios digitales. Por eso, hemos trabajado en este proyecto aplicando conocimientos de redes, servidores DNS, proxys, y Active Directory, entre otros.
+    <br><br>
+    Más allá del cumplimiento académico, buscamos que este trabajo nos prepare para enfrentar futuros retos en el campo de la tecnología, especialmente durante nuestras prácticas en el SENA.
+  </p>
+</div>
 
 <div class="contenido" id="avance-tecnico">
     <h2>1.1 Avance Técnico</h2>
@@ -141,31 +147,37 @@
 </div>
 
 <div class="contenido" id="competencias">
-    <h2>1.2 Competencias del Programa y Resultados del Aprendizaje</h2>
+  <h2>1.2 Competencias del Programa y Resultados del Aprendizaje</h2>
 
-    <h3> Competencias del Programa</h3>
-    <ul style="margin-left: 20px; margin-top: 10px;">
-        <li>Instalar y configurar servidores DNS y servidores proxy según los requerimientos de red.</li>
-        <li>Gestionar el direccionamiento y resolución de nombres mediante servicios DNS.</li>
-        <li>Implementar políticas de filtrado de contenido y acceso mediante servidores proxy.</li>
-        <li>Documentar configuraciones técnicas de DNS y proxy utilizando formatos establecidos.</li>
-    </ul>
+  <h3>Competencias del Programa</h3>
+  <ul style="margin-left: 20px; margin-top: 10px;">
+    <li>Diseñar e implementar una red centralizada mediante el uso de servidores para mejorar la gestión y seguridad.</li>
+    <li>Configurar servicios como DNS y Proxy de acuerdo con las necesidades de una red local.</li>
+    <li>Administrar usuarios, permisos y políticas a través de un dominio con Active Directory.</li>
+    <li>Aplicar buenas prácticas de seguridad mediante políticas de grupo (GPO).</li>
+    <li>Documentar técnicamente cada etapa del proceso, desde la instalación hasta la validación de servicios.</li>
+  </ul>
 
-    <h3 style="margin-top: 25px;"> Resultados del Aprendizaje</h3>
-    <ul style="margin-left: 20px; margin-top: 10px;">
-        <li>Configurar servidores DNS para la resolución eficiente de nombres de dominio en una red local o corporativa.</li>
-        <li>Instalar y administrar servidores proxy para el control de acceso y optimización del uso de Internet.</li>
-        <li>Analizar el tráfico gestionado por el proxy y aplicar mejoras en la administración del servicio.</li>
-        <li>Elaborar documentación técnica sobre la instalación, configuración y pruebas realizadas en DNS y proxy.</li>
-    </ul>
+  <h3 style="margin-top: 25px;">Resultados del Aprendizaje</h3>
+  <ul style="margin-left: 20px; margin-top: 10px;">
+    <li>Instalar un sistema operativo de servidor y configurar sus servicios de red principales.</li>
+    <li>Establecer un dominio, crear unidades organizativas y gestionar usuarios y equipos.</li>
+    <li>Configurar servidores DNS para resolver nombres dentro de la red interna.</li>
+    <li>Implementar un servidor proxy funcional para monitorear y controlar el acceso a internet.</li>
+    <li>Aplicar políticas de grupo para reforzar la seguridad y el orden en la red.</li>
+    <li>Validar el funcionamiento del sistema utilizando herramientas como ping, nslookup, ipconfig, entre otras.</li>
+  </ul>
 </div>
   
-  <div class="contenido" id="problema">
-    <h2>1.3 Formulación del Problema</h2>
-    <p>
-        A pesar de la creciente dependencia de las tecnologías de red, muchas personas aún desconocen cómo funcionan los servidores, el sistema de nombres de dominio (DNS) y los proxys. Esta falta de conocimiento genera confusión al momento de configurar, utilizar o incluso comprender los servicios digitales más comunes. Además, la poca visibilidad de estos temas en espacios educativos o de divulgación técnica limita el acceso a soluciones eficientes y seguras.<br><br>
-        Por ello, se hace necesario implementar estrategias de formación, acompañamiento y divulgación que permitan acercar estos conceptos a un público más amplio y facilitar su comprensión a través de prácticas guiadas y herramientas visuales.
-    </p>
+<div class="contenido" id="problema">
+  <h2>1.3 Formulación del Problema</h2>
+  <p>
+    En muchas pequeñas y medianas empresas, la red está activa, pero desorganizada: todos los equipos se conectan sin control, no existen usuarios definidos, las contraseñas son débiles o compartidas, y no hay ninguna política de seguridad implementada. Además, no se cuenta con herramientas que permitan bloquear páginas, limitar el uso de internet o monitorear el tráfico.
+    <br><br>
+    A esto se suma la ausencia de servicios como DNS configurados correctamente, lo que genera lentitud y errores en las conexiones, o servidores proxy que permitan filtrar el contenido de navegación. En caso de fallos o problemas, tampoco hay un método claro para identificar qué está pasando en la red.
+    <br><br>
+    Esta falta de estructura afecta la seguridad, la eficiencia y el control de la red. Por eso, nuestro proyecto propone una solución técnica basada en un servidor centralizado que integre servicios como Active Directory, DNS y Proxy, permitiendo así una red más ordenada, controlada y segura.
+  </p>
 </div>
 
 <div class="contenido" id="objetivos">
@@ -183,17 +195,19 @@
   <div id="objetivo-general" style="display: none; margin-top: 20px;">
     <h3>Objetivo General</h3>
     <p>
-      Brindar una comprensión clara y práctica sobre el funcionamiento de los servidores, proxys y servicios DNS, a través de experiencias educativas y técnicas que permitan al usuario reconocer su importancia, configuración y aplicaciones en el entorno digital actual.
+      Implementar una red organizada y segura mediante un servidor centralizado que permita la gestión de usuarios, el control de acceso, la configuración de servicios DNS y Proxy, y la aplicación de políticas de grupo, orientado a resolver problemáticas comunes en redes no estructuradas.
     </p>
   </div>
 
   <div id="objetivo-especifico" style="display: none; margin-top: 20px;">
     <h3>Objetivos Específicos</h3>
     <ul style="padding-left: 20px; list-style-type: disc;">
-      <li>Identificar las funciones principales de los servidores, proxys y servicios DNS en un entorno de red.</li>
-      <li>Diseñar sesiones prácticas que permitan una exploración guiada sobre la configuración y el uso de estos componentes.</li>
-      <li>Fomentar la divulgación de estos temas a través de herramientas digitales, redes sociales o espacios educativos.</li>
-      <li>Promover el trabajo colaborativo y el reparto de responsabilidades para facilitar el aprendizaje y la puesta en práctica de los conocimientos adquiridos.</li>
+      <li>Instalar un sistema operativo de servidor y preparar el entorno de red.</li>
+      <li>Configurar Active Directory para centralizar la administración de usuarios y equipos.</li>
+      <li>Implementar servicios DNS y Proxy según las necesidades de la red.</li>
+      <li>Establecer políticas de grupo (GPO) que refuercen la seguridad y el control de la red.</li>
+      <li>Unir estaciones de trabajo al dominio y validar su conectividad y comportamiento.</li>
+      <li>Documentar todo el proceso técnico de instalación, configuración y validación.</li>
     </ul>
   </div>
 </div>
@@ -214,15 +228,18 @@
 <div class="contenido" id="alcance">
   <h2>1.5 Alcance del Proyecto</h2>
   <p>
-    Este proyecto busca no solo explicar el funcionamiento de los servidores, DNS y proxys, sino también acercar estos conceptos al entorno educativo mediante actividades prácticas y explicaciones claras. Nuestro objetivo es impactar de forma positiva a estudiantes y docentes, generando un ambiente de aprendizaje colaborativo, técnico y actualizado.<br><br>
-    Si bien estamos iniciando con bases sólidas, aspiramos a que el proyecto se expanda y pueda implementarse en otras instituciones educativas que también deseen fortalecer su conocimiento en tecnologías de red.
+    El proyecto tiene como alcance principal la instalación y configuración de un entorno cliente-servidor funcional dentro del Colegio Montferri. Se busca implementar servicios clave como DNS, Proxy y Active Directory para demostrar cómo estos pueden mejorar la administración, seguridad y organización de una red local.
+    <br><br>
+    El enfoque está orientado a entornos educativos o de pequeña escala, con el fin de facilitar el aprendizaje práctico sobre redes y servicios. La solución presentada servirá como modelo básico que puede ser replicado o adaptado a necesidades similares dentro del colegio, sin comprometer equipos reales en producción.
   </p>
 </div>
 
 <div class="contenido" id="implementacion">
   <h2>1.6 Lugar de Implementación</h2>
   <p>
-    El proyecto se desarrollará en las instalaciones del <strong>Colegio Montferri</strong>, una institución comprometida con la educación técnica en Bogotá. Este lugar permitirá llevar a cabo tanto las actividades teóricas como prácticas, brindando el espacio y los recursos necesarios para el correcto desarrollo del proyecto.
+    La implementación del proyecto se realizó en el <strong>Colegio Montferri</strong>, aprovechando los espacios designados para las prácticas técnicas. Esta institución brinda el ambiente adecuado para realizar simulaciones, pruebas y configuraciones, tanto en sistemas operativos como en servicios de red.
+    <br><br>
+    La ejecución se desarrollara de forma controlada, utilizando equipos disponibles en el aula o máquinas virtuales, sin afectar el funcionamiento de la red institucional.
   </p>
 
   <div style="margin-top: 15px;">
@@ -247,25 +264,32 @@
   </div>
 </div>
 
-  <div class="contenido" id="infografia">
-    <h2>1.7 Infografía</h2>
-    <p>Todavia no tenemos nada</p>
+ <div class="contenido" id="infografia">
+  <h2>1.7 Infografía</h2>
+  <p>
+    A continuación, se presenta la infografía del marco teórico donde se explican conceptos clave como servidor, DNS, Proxy y Directorio Activo, que fundamentan el desarrollo técnico de este proyecto.
+  </p>
+
+  <div style="margin-top: 20px;">
+    <img src="Informe_Marco_Teorico.png" alt="Infografía Marco Teórico" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0px 2px 10px rgba(0,0,0,0.3);">
   </div>
+</div>
 
   <div class="contenido" id="acuerdo">
     <h2>1.8 Formato de Acuerdo y Consentimiento</h2>
     <p>falta firma de instructor</p>
   </div>
 
-  <div class="contenido" id="bitacora">
-    <h2>1.9 Bitácora de Visitas</h2>
-    <p>Aqui es la bitacora</p>
-  </div>
-
-  <div class="contenido" id="conclusiones">
-    <h2>1.10 Conclusiones de la Fase</h2>
-    <p>Nuestra conclucion</p>
-  </div>
+<div class="contenido" id="conclusiones">
+  <h2>1.10 Conclusiones de la Fase</h2>
+  <p>
+    En esta primera fase del proyecto se logró recopilar, organizar y comprender los conceptos fundamentales relacionados con la implementación de servidores, así como los servicios más relevantes dentro de una red estructurada, como DNS, Proxy y Active Directory.
+    <br><br>
+    El análisis permitió identificar problemas comunes que enfrentan redes sin una configuración centralizada, especialmente en pequeñas organizaciones o entornos educativos. También se establecieron los objetivos técnicos del proyecto y se definió una solución basada en un servidor centralizado que permita controlar usuarios, accesos y recursos.
+    <br><br>
+    Además, se estructuraron las competencias y resultados de aprendizaje, y se planificó el alcance del proyecto de manera realista, considerando los recursos disponibles dentro del Colegio Montferri. Esta base servirá como guía para las siguientes fases de ejecución técnica.
+  </p>
+</div>
 
 </body>
   <footer>
