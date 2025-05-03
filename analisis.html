@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análisis - Tecno Nexus</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function mostrarSeccion(id) {
+      let secciones = document.querySelectorAll(".contenido");
+      secciones.forEach(seccion => seccion.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+
+    <style>
+
+    .contenido {
+      margin-left: 280px;
+      padding: 40px;
+      display: none;
+      min-height: 100vh;
+      background-color: #000000;
+      box-shadow: inset 0 0 40px rgba(136, 0, 255, 0.265);
+      border-left: 1px solid #000000;
+    }
+
+
+    #introduccion {
+      display: block;
+    }
+  </style>
+
+</head>
+<body class="pagina-analisis">
+  
+<header>
+  <img src="logoSena.png" alt="Logo SENA" class="logo-sena">
+  <div class="barra-navegacion">
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="analisis.html#introduccion">Análisis</a></li>
+      <li><a href="planeacion.html">Planeación</a></li>
+      <li><a href="ejecucion.html">Ejecución</a></li>
+      <li><a href="evaluacion.html">Evaluación</a></li>
+    </ul>
+  </div>
+</header>
+
+  <div class="menu-lateral">
+    <h2>Fase de Análisis</h2>
+    <br>
+    <ul>
+      <li><a href="#" onclick="mostrarSeccion('introduccion')">¿Quiénes Somos?</a></li>
+      <li><a href="#" onclick="mostrarSeccion('avance-tecnico')">1.1 Avance Técnico</a></li>
+      <li><a href="#" onclick="mostrarSeccion('competencias')">1.2 Competencias y Resultados</a></li>
+      <li><a href="#" onclick="mostrarSeccion('problema')">1.3 Formulación del Problema</a></li>
+      <li><a href="#" onclick="mostrarSeccion('objetivos')">1.4 Objetivos</a></li>
+      <li><a href="#" onclick="mostrarSeccion('alcance')">1.5 Alcance del Proyecto</a></li>
+      <li><a href="#" onclick="mostrarSeccion('implementacion')">1.6 Lugar de Implementación</a></li>
+      <li><a href="#" onclick="mostrarSeccion('infografia')">1.7 Infografía</a></li>
+      <li><a href="#" onclick="mostrarSeccion('acuerdo')">1.8 Formato de Acuerdo</a></li>
+      <li><a href="#" onclick="mostrarSeccion('conclusiones')">1.9 Conclusiones</a></li>
+    </ul>
+  </div>
+
+<div class="contenido" id="introduccion">
+  <h2>¿Quiénes Somos?</h2>
+  <p>
+    El proyecto tiene como objetivo la implementación de una red cliente-servidor que integre dos servicios esenciales para la gestión y administración de la infraestructura tecnológica de una organización: File Server y DNS. La configuración de estos servicios permitirá optimizar la gestión de archivos dentro de la red y garantizar un adecuado funcionamiento de la resolución de nombres, lo cual es crucial para la comunicación y acceso a recursos en una red empresarial.
+  </p>
+  <p>
+    El proceso de implementación se centra en la instalación y configuración del servidor, así como en la creación de un entorno de dominio que facilite la administración centralizada de los recursos y usuarios a través de Active Directory. Esto permitirá una mayor seguridad, control de acceso y organización de los recursos de la red. Además, se pretende configurar el servicio de DNS para asegurar que todos los dispositivos en la red puedan comunicarse de manera eficiente, resolviendo correctamente los nombres de dominio.
+  </p>
+  <p>
+    La ejecución de este proyecto no solo proporcionará una infraestructura de red más organizada y segura, sino que también permitirá al equipo de trabajo adquirir una experiencia valiosa en la administración de servidores y servicios de red. A través de la implementación de estos servicios, se busca mejorar la conectividad, el acceso a archivos compartidos y la resolución de problemas relacionados con la red, lo cual es fundamental en cualquier entorno de TI moderno.
+  </p>
+  <p>
+    Además, se incluirán herramientas de validación y disponibilidad como tracert, nslookup, ping, entre otras, para asegurar el buen funcionamiento de la red y de los servicios configurados. De esta manera, el proyecto contribuirá a la mejora del rendimiento y la seguridad de la red en la organización, preparando a los participantes para futuros desafíos en el campo de la tecnología.
+  </p>
+</div>
+
+<div class="contenido" id="avance-tecnico">
+  <h2>1.1 Avance Técnico</h2>
+
+  <h3 style="color: #4b0082;">SERVERS MAINTENANCE PROJECT</h3>
+  <p>
+    VÍCTOR RAMÍREZ AND ANDRÉS RODRÍGUEZ<br>
+    Team 8-SENA | Card #2926115
+  </p>
+  <p>
+    This project is developed by team number 8 from SENA, focused on the design, configuration and implementation of a client-server network architecture. The aim is to create an organized and secure environment through the use of a domain model that includes Organizational Units (OU), users, groups and security policies (GPOs).
+  </p>
+  <p>
+    Through the installation and configuration of essential services like DNS and Active Directory, this project seeks to provide centralized management, better control of users and resources, and secure communication across the network. Additionally, remote access techniques are implemented, allowing external technical support and monitoring.
+  </p>
+  <p>
+    The purpose is to improve the availability, performance and security of technological infrastructures, while strengthening students' skills in server administration and network services management.
+  </p>
+
+  <h3 style="color: #4b0082; margin-top: 30px;">PROYECTO DE MANTENIMIENTO DE SERVIDORES</h3>
+  <p>
+    VÍCTOR RAMÍREZ Y ANDRÉS RODRÍGUEZ<br>
+    Equipo 8-SENA | Ficha #2926115
+  </p>
+  <p>
+    Este proyecto es desarrollado por el equipo número 8 del SENA, enfocado en el diseño, configuración e implementación de una red con arquitectura cliente-servidor. El objetivo es construir un entorno organizado y seguro mediante el uso de un modelo de dominio que incluya Unidades Organizativas (OU), usuarios, grupos y políticas de seguridad (GPOs).
+  </p>
+  <p>
+    A través de la instalación y configuración de servicios fundamentales como DNS y Active Directory, se busca lograr una administración centralizada, un mayor control de los usuarios y recursos, y una comunicación segura dentro de la red. Además, se implementan técnicas de acceso remoto que permiten soporte técnico y monitoreo desde ubicaciones externas.
+  </p>
+  <p>
+    El propósito es mejorar la disponibilidad, el rendimiento y la seguridad de las infraestructuras tecnológicas, al tiempo que se fortalecen las habilidades de los estudiantes en administración de servidores y gestión de servicios de red.
+  </p>
+
+  <h3 style="margin-top: 30px;">Documento</h3>
+  <img src="Documento1.jpg" alt="Documento Técnico" style="width:100%; max-width:600px; border: 2px solid #620083; border-radius: 8px; margin-top: 10px;">
+
+  <h3 style="margin-top: 30px;">Audio</h3>
+  <audio controls style="margin-top: 10px; width: 100%; max-width: 600px; background: #222; border-radius: 8px;">
+    <source src="Audio1.mp3" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+</div>
+
+<div class="contenido" id="competencias">
+  <h2>1.2 Competencias del Programa y Resultados del Aprendizaje</h2>
+
+  <h3>Competencias del Programa</h3>
+  <ul style="margin-left: 20px; margin-top: 10px;">
+    <li>Diseñar e implementar una red centralizada mediante el uso de servidores para mejorar la gestión y seguridad.</li>
+    <li>Configurar servicios como DNS y File Server de acuerdo con las necesidades de una red local.</li>
+    <li>Administrar usuarios, permisos y políticas a través de un dominio con Active Directory.</li>
+    <li>Aplicar buenas prácticas de seguridad mediante políticas de grupo (GPO).</li>
+    <li>Documentar técnicamente cada etapa del proceso, desde la instalación hasta la validación de servicios.</li>
+  </ul>
+
+  <h3 style="margin-top: 25px;">Resultados del Aprendizaje</h3>
+  <ul style="margin-left: 20px; margin-top: 10px;">
+    <li>Instalar un sistema operativo de servidor y configurar sus servicios de red principales.</li>
+    <li>Establecer un dominio, crear unidades organizativas y gestionar usuarios y equipos.</li>
+    <li>Configurar servidores DNS para resolver nombres dentro de la red interna.</li>
+    <li>Implementar un servidor de archivos funcional para compartir recursos dentro de la red.</li>
+    <li>Aplicar políticas de grupo para reforzar la seguridad y el orden en la red.</li>
+    <li>Validar el funcionamiento del sistema utilizando herramientas como ping, nslookup, ipconfig, entre otras.</li>
+  </ul>
+</div>
+  
+<div class="contenido" id="problema">
+  <h2>1.3 Formulación del Problema</h2>
+  <p>
+    En muchos entornos institucionales y empresariales, la infraestructura tecnológica carece de una administración centralizada, lo que genera desorganización en la red: equipos conectados sin control, ausencia de políticas de seguridad, usuarios sin credenciales personalizadas, y recursos compartidos sin medidas de protección. Esta falta de estructura compromete tanto la eficiencia operativa como la seguridad de la información.
+    <br><br>
+    Además, la inexistencia de servicios esenciales como un servidor DNS adecuadamente configurado dificulta la resolución de nombres dentro de la red, generando demoras y errores frecuentes en la comunicación entre dispositivos. De igual forma, la falta de un sistema de archivos centralizado impide una correcta gestión y respaldo de los documentos compartidos.
+    <br><br>
+    Frente a esta problemática, surge la necesidad de implementar una solución técnica basada en servidores, que incluya servicios como DNS, Active Directory y File Server. Esta propuesta permitirá organizar los recursos de red, establecer un modelo de dominio con usuarios y permisos definidos, y facilitar un entorno seguro, estable y escalable para el manejo de la información y la conectividad entre equipos.
+    <br><br>
+    ¿Es posible transformar una red desorganizada y vulnerable en una infraestructura robusta, segura y eficiente mediante la correcta implementación de servicios de servidor?
+  </p>
+</div>
+
+<div class="contenido" id="objetivos">
+  <h2>1.4 Objetivos</h2>
+
+  <div style="margin-top: 20px;">
+    <button onclick="mostrarObjetivo('general')" style="margin-right: 10px; padding: 10px 15px; background-color: #444; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Objetivo General
+    </button>
+    <button onclick="mostrarObjetivo('especifico')" style="padding: 10px 15px; background-color: #444; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Objetivos Específicos
+    </button>
+  </div>
+
+  <!-- Objetivo General -->
+  <div id="objetivo-general" style="display: none; margin-top: 20px;">
+    <h3>Objetivo General</h3>
+    <p>
+      Implementar una red organizada y segura mediante un servidor centralizado que permita la gestión de usuarios, el control de acceso, la configuración de servicios DNS y File Server, y la aplicación de políticas de grupo, orientado a resolver problemáticas comunes en redes no estructuradas.
+    </p>
+  </div>
+
+  <!-- Objetivos Específicos por fase -->
+  <div id="objetivo-especifico" style="display: none; margin-top: 20px;">
+    <h3>Objetivos Específicos por Fase</h3>
+    <div style="margin-top: 10px;">
+      <button onclick="mostrarFase('analisis')" style="margin-right: 10px; padding: 8px 12px; background-color: #620083; color: white; border: none; border-radius: 5px; cursor: pointer;">Análisis</button>
+      <button onclick="mostrarFase('planeacion')" style="margin-right: 10px; padding: 8px 12px; background-color: #620083; color: white; border: none; border-radius: 5px; cursor: pointer;">Planeación</button>
+      <button onclick="mostrarFase('ejecucion')" style="margin-right: 10px; padding: 8px 12px; background-color: #620083; color: white; border: none; border-radius: 5px; cursor: pointer;">Ejecución</button>
+      <button onclick="mostrarFase('evaluacion')" style="padding: 8px 12px; background-color: #620083; color: white; border: none; border-radius: 5px; cursor: pointer;">Evaluación</button>
+    </div>
+
+    <!-- Análisis -->
+    <div id="fase-analisis" style="display: none; margin-top: 20px;">
+      <h4>Fase de Análisis</h4>
+      <ul style="padding-left: 20px; list-style-type: disc;">
+        <li>Identificar necesidades tecnológicas y organizativas en la red actual.</li>
+        <li>Evaluar condiciones físicas y lógicas del entorno.</li>
+        <li>Seleccionar servicios adecuados como DNS y File Server.</li>
+        <li>Establecer requerimientos técnicos del servidor central.</li>
+        <li>Delimitar el alcance del proyecto según recursos y tiempo.</li>
+        <li>Detectar riesgos potenciales en la instalación o configuración.</li>
+        <li>Recolectar datos para un diagnóstico documentado.</li>
+      </ul>
+    </div>
+
+    <!-- Planeación -->
+    <div id="fase-planeacion" style="display: none; margin-top: 20px;">
+      <h4>Fase de Planeación</h4>
+      <ul style="padding-left: 20px; list-style-type: disc;">
+        <li>Diseñar la estructura lógica de red basada en Active Directory.</li>
+        <li>Organizar el cronograma de actividades para cada fase.</li>
+        <li>Definir el nombre de dominio y las políticas de seguridad iniciales.</li>
+        <li>Asignar roles y tareas al equipo de trabajo.</li>
+        <li>Planificar la instalación de servicios como DNS y File Server.</li>
+        <li>Diseñar unidades organizativas (OUs) y grupos de usuarios.</li>
+        <li>Establecer mecanismos de respaldo y restauración.</li>
+        <li>Elaborar documentación base para guiar la implementación.</li>
+      </ul>
+    </div>
+
+    <!-- Ejecución -->
+    <div id="fase-ejecucion" style="display: none; margin-top: 20px;">
+      <h4>Fase de Ejecución</h4>
+      <ul style="padding-left: 20px; list-style-type: disc;">
+        <li>Instalar el sistema operativo servidor (Windows Server).</li>
+        <li>Configurar Active Directory y crear el dominio.</li>
+        <li>Configurar el servicio DNS para la resolución de nombres.</li>
+        <li>Instalar y organizar el File Server para compartir archivos.</li>
+        <li>Crear cuentas de usuario, grupos y OUs.</li>
+        <li>Aplicar políticas de grupo (GPO) según necesidades.</li>
+        <li>Unir las estaciones de trabajo al dominio y verificar conectividad.</li>
+        <li>Realizar pruebas funcionales de los servicios implementados.</li>
+      </ul>
+    </div>
+
+    <!-- Evaluación -->
+    <div id="fase-evaluacion" style="display: none; margin-top: 20px;">
+      <h4>Fase de Evaluación</h4>
+      <ul style="padding-left: 20px; list-style-type: disc;">
+        <li>Verificar el cumplimiento de los objetivos planteados.</li>
+        <li>Comprobar el correcto funcionamiento de DNS y File Server.</li>
+        <li>Analizar el comportamiento de usuarios y permisos.</li>
+        <li>Validar que las GPO estén aplicándose correctamente.</li>
+        <li>Documentar problemas encontrados y soluciones aplicadas.</li>
+        <li>Obtener retroalimentación del instructor o usuarios.</li>
+        <li>Comparar resultados con lo planeado inicialmente.</li>
+        <li>Reflexionar sobre el aprendizaje obtenido en el proceso.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  function mostrarObjetivo(tipo) {
+    document.getElementById("objetivo-general").style.display = "none";
+    document.getElementById("objetivo-especifico").style.display = "none";
+    document.getElementById("fase-analisis").style.display = "none";
+    document.getElementById("fase-planeacion").style.display = "none";
+    document.getElementById("fase-ejecucion").style.display = "none";
+    document.getElementById("fase-evaluacion").style.display = "none";
+
+    if (tipo === "general") {
+      document.getElementById("objetivo-general").style.display = "block";
+    } else if (tipo === "especifico") {
+      document.getElementById("objetivo-especifico").style.display = "block";
+    }
+  }
+
+  function mostrarFase(fase) {
+    document.getElementById("fase-analisis").style.display = "none";
+    document.getElementById("fase-planeacion").style.display = "none";
+    document.getElementById("fase-ejecucion").style.display = "none";
+    document.getElementById("fase-evaluacion").style.display = "none";
+
+    document.getElementById("fase-" + fase).style.display = "block";
+  }
+</script>
+
+<div class="contenido" id="alcance">
+  <h2>1.5 Alcance del Proyecto</h2>
+  <p>
+    Este proyecto tiene como alcance el diseño, instalación y configuración de una red cliente-servidor dentro del Colegio Montferri, orientada a mejorar la organización, seguridad y administración de los recursos informáticos institucionales. La solución incluye la implementación de servicios como Active Directory, DNS y File Server, los cuales serán instalados y gestionados desde un servidor central con sistema operativo Windows Server.
+    <br><br>
+    La red contará con un dominio estructurado que permitirá el control de usuarios, permisos, políticas de grupo (GPO) y el acceso compartido a recursos mediante un servidor de archivos. Además, se configurará un servicio DNS interno para la resolución de nombres y una estructura jerárquica de Unidades Organizativas (OUs).
+    <br><br>
+    El proyecto está dirigido a un entorno educativo, específicamente a la sala de sistemas del colegio. Se implementará una red cliente-servidor con servicios básicos de administración y control de usuarios. El sistema será funcional y operativo para mejorar la administración de los recursos.
+    <br><br>
+    Entre los aspectos que se cubrirán se encuentran:
+    <ul style="padding-left: 20px; list-style-type: disc;">
+      <li>Configuración física y lógica de la red cliente-servidor en ambiente controlado.</li>
+      <li>Instalación de Windows Server y activación de roles esenciales (DNS, File Services).</li>
+      <li>Creación de usuarios, grupos y unidades organizativas.</li>
+      <li>Aplicación de políticas de grupo básicas para el control de accesos y recursos.</li>
+      <li>Documentación técnica del proceso de diseño, instalación y evaluación del sistema implementado.</li>
+    </ul>
+    <br>
+    Este proyecto busca implementar una solución funcional y práctica, enfocada en mejorar la organización y seguridad de la red en la sala de sistemas del colegio.
+  </p>
+</div>
+
+<div class="contenido" id="implementacion">
+  <h2>1.6 Lugar de Implementación</h2>
+  <p>
+    La implementación del proyecto se realizó en el <strong>Colegio Montferri</strong>, aprovechando los espacios designados para las prácticas técnicas. Esta institución brinda el ambiente adecuado para realizar simulaciones, pruebas y configuraciones, tanto en sistemas operativos como en servicios de red.
+    <br><br>
+    La ejecución se desarrollara de forma controlada, utilizando equipos disponibles en el aula o máquinas virtuales, sin afectar el funcionamiento de la red institucional.
+  </p>
+
+  <div style="margin-top: 15px;">
+    <strong>Dirección:</strong> Cra. 77 #9-44, Bogotá<br>
+    <strong>Teléfono:</strong> 304 5431429
+  </div>
+
+  <div style="margin-top: 20px;">
+    <img src="imagen2.jpg" alt="Colegio Montferri" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0px 2px 10px rgba(0,0,0,0.2);">
+  </div>
+
+  <div style="margin-top: 20px;">
+    <iframe 
+      src="https://www.google.com/maps?q=Cra.+77+%239-44,+Bogotá&output=embed" 
+      width="100%" 
+      height="350" 
+      style="border:0; border-radius: 10px;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+  <div class="contenido" id="infografia">
+    <h2>1.7 Infografía</h2>
+    <p>
+      A continuación, se presenta la infografía del marco teórico donde se explican conceptos clave como servidor, DNS y Directorio Activo, que fundamentan el desarrollo técnico de este proyecto.
+    </p>
+  
+    <div style="margin-top: 20px;">
+      <iframe 
+        src="Infografia.pdf" 
+        width="100%" 
+        height="600px" 
+        style="border: none; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="contenido" id="acuerdo">
+    <h2>1.8 Formato de Acuerdo y Consentimiento</h2>
+  
+    <p style="margin-bottom: 20px;">
+      A continuación, se muestran los formatos de acuerdo y consentimiento diligenciados por los integrantes del equipo.
+    </p>
+  
+    <!-- Formato Andrés Rodríguez -->
+    <div style="margin-bottom: 30px;">
+      <h3 style="margin-bottom: 10px;">Andrés Rodríguez</h3>
+      <iframe 
+        src="AndresRodriguez.pdf" 
+        width="100%" 
+        height="600px" 
+        style="border: none; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+      </iframe>
+    </div>
+  
+    <!-- Formato Víctor Ramírez -->
+    <div>
+      <h3 style="margin-bottom: 10px;">Víctor Ramírez</h3>
+      <iframe 
+        src="VictorRamirez.pdf" 
+        width="100%" 
+        height="600px" 
+        style="border: none; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+      </iframe>
+    </div>
+  </div>
+
+<div class="contenido" id="conclusiones"> 
+  <h2>1.9 Conclusiones de la Fase</h2>
+  <p>
+    En esta primera fase del proyecto se logró recopilar, organizar y comprender los conceptos fundamentales relacionados con la implementación de servidores, así como los servicios más relevantes dentro de una red estructurada, como DNS y Active Directory.
+    <br><br>
+    El análisis permitió identificar problemas comunes que enfrentan redes sin una configuración centralizada, especialmente en pequeñas organizaciones o entornos educativos. También se establecieron los objetivos técnicos del proyecto y se definió una solución basada en un servidor centralizado que permita controlar usuarios, accesos y recursos.
+    <br><br>
+    Además, se estructuraron las competencias y resultados de aprendizaje, y se planificó el alcance del proyecto de manera realista, considerando los recursos disponibles dentro del Colegio Montferri. Esta base servirá como guía para las siguientes fases de ejecución técnica.
+  </p>
+</div>
+  
+  <button onclick="mostrarSeccion('conclusiones')" class="boton-conclusiones">
+  Ver Conclusiones
+</button>
+
+<footer>
+  <p>Creado por <strong>TecnoNexus</strong>. Todos los derechos reservados © 2025</p>
+</footer>
+
+</body>
+
+
+</html>

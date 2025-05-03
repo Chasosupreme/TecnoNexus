@@ -1,0 +1,286 @@
+/* ░░░░░░ CONFIGURACIÓN GLOBAL ░░░░░░ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ░░░░░░ CONFIGURACIÓN GENERAL ░░░░░░ */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ░░░░░░ HEADER ░░░░░░ */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(141, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  transition: background-color 0.3s;
+}
+
+header.scrolled {
+  background-color: rgb(130, 0, 0); /* Se oscurece cuando haces scroll */
+}
+
+.logo-sena {
+  height: 30px; /* Cambia a un tamaño más pequeño */
+  width: auto;
+  margin-right: 15px;
+}
+
+/* ░░░░░░ PIE DE PÁGINA ░░░░░░ */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+  z-index: 10;
+}
+
+/* ░░░░░░ PORTADA ░░░░░░ */
+.portada {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background: url('Servidores.jpg') center/cover no-repeat fixed;
+}
+
+.titulo-principal {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 4px 4px 10px black;
+  z-index: 3; /* Mantener el título por encima */
+}
+
+/* ░░░░░░ SECCIÓN DE APRENDICES ░░░░░░ */
+.seccion-aprendices {
+  background-color: #000;
+  color: #a259ff; /* Morado brillante */
+  padding: 120px 30px;
+  text-align: center;
+  min-height: 100vh;
+  transition: background-color 0.6s ease-in-out;
+}
+
+.contenedor-aprendices {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.aprendiz {
+  width: 250px;
+}
+
+.aprendiz img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.3);
+  transition: transform 0.3s;
+}
+
+.aprendiz img:hover {
+  transform: scale(1.05);
+}
+
+.aprendiz p {
+  margin-top: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* ░░░░░░ MENÚ LATERAL IZQUIERDO ░░░░░░ */
+.menu-lateral {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #550092 #111;
+  position: fixed;
+  top: 61px; /* debajo del header */
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 60px); /* espacio exacto debajo del header */
+  background: #000;
+  padding: 10px 15px;
+  padding-bottom: 80px; /* 👈 Añadido para permitir scroll completo */
+  z-index: 1; /* Asegura que no tape contenido */
+}
+
+/* Estilo para scrollbar bonito (Chrome, Edge, Opera) */
+.menu-lateral::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-lateral::-webkit-scrollbar-thumb {
+  background: #4b0082;
+  border-radius: 3px;
+}
+
+.menu-lateral::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral li {
+  margin-bottom: 20px; /* más compacto */
+}
+
+.menu-lateral a {
+  color: rgb(161, 161, 161);
+  text-decoration: none;
+  padding: 8px 20px;
+  display: block;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 0.95rem;
+}
+
+.menu-lateral a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ░░░░░░ CONTENIDO PRINCIPAL ░░░░░░ */
+.contenido {
+  margin-left: 280px;
+  padding: 40px;
+  display: none;
+  min-height: 100vh;
+  background-color: #000000;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  border-left: 1px solid #000000;
+}
+
+#introduccion {
+  display: block;
+}
+
+.contenido h2 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+}
+
+/* ░░░░░░ INTRODUCCIÓN ░░░░░░ */
+.pagina-intro {
+  background: linear-gradient(135deg, #000000, #1a002b); /* Negro a morado oscuro */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.intro-dialog {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* ░░░░░░ PÁGINA DE ANÁLISIS ░░░░░░ */
+.pagina-analisis {
+  display: block;
+  min-height: 100vh;
+  background-color: #000; /* Fondo negro sólido */
+  padding-top: 60px;
+}
+
+.pagina-analisis header {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  right: 0;
+  height: 60px;
+  background: #0f0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  z-index: 10;
+}
+
+/* Barra del menú superior */
+.barra-navegacion {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Estilo de botones del menú */
+.menu {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 8px 12px;
+  background: #000;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.menu a:hover {
+  background: #333;
+}
+
+/* ░░░░░░ RESPONSIVE ░░░░░░ */
+@media screen and (max-width: 768px) {
+  .menu-lateral {
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background: #000;
+    padding: 20px;
+    overflow-y: auto; /* 🔥 aquí está la clave */
+  }
+
+  .contenido {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .pagina-analisis header {
+    left: 0;
+  }
+
+  .pagina-analisis footer {
+    left: 0;
+    width: 100%;
+  }
+}
+/*planeacion*/
