@@ -1,0 +1,111 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecno Nexus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pagina-inicio">
+  <div class="overlay-transition" id="overlay"></div>
+    <!-- Encabezado superior con el cuadro de Andrés y Víctor y los botones de navegación -->
+    <header>
+      <img src="logoSena.png" alt="Logo SENA" class="logo-sena">
+        <div class="top-text">
+            <p>Víctor y Andres crearon esta página</p>
+        </div>
+        <div class="barra-navegacion">
+    <ul class="menu">
+      <li><a href="analisis.html">Análisis</a></li>
+      <li><a href="planeacion.html">Planeación</a></li>
+      <li><a href="ejecucion.html">Ejecución</a></li>
+      <li><a href="evaluacion.html">Evaluación</a></li>
+    </ul>
+  </div>
+</header>
+<main class="portada">
+  <h1 class="titulo-principal">Tecno Nexus</h1>
+</main>
+
+<!-- Sección de aprendices (más abajo) -->
+<section id="aprendices" style="padding: 120px 20px; background-color: #000;">
+  <div style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; gap: 40px; color: #a259ff; font-size: 1.1rem; text-align: center;">
+
+    <!-- Andrés -->
+    <div style="width: 280px;">
+      <img src="andres.jpeg" alt="Foto de Andrés" style="width: 100%; border-radius: 10px;">
+      <p style="margin-top: 15px;">
+        <strong>Aprendiz:</strong> Andrés Rodríguez<br>
+        <strong>Edad:</strong> 16 años<br>
+        <strong>Colegio:</strong> Colegio Montferri<br>
+        <strong>Ficha:</strong> 2926115<br>
+        <strong>Correo:</strong> andreferolo24@gmail.com<br>
+        <strong>Teléfono:</strong> 319 5351191
+      </p>
+    </div>
+
+    <!-- Víctor -->
+    <div style="width: 280px;">
+      <img src="victor.jpeg" alt="Foto de Víctor" style="width: 100%; border-radius: 10px;">
+      <p style="margin-top: 15px;">
+        <strong>Aprendiz:</strong> Víctor Ramírez<br>
+        <strong>Edad:</strong> 16 años<br>
+        <strong>Colegio:</strong> Colegio Montferri<br>
+        <strong>Ficha:</strong> 2926115<br>
+        <strong>Correo:</strong> danielgaoperez@gmail.com<br>
+        <strong>Teléfono:</strong> 305 9154701
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>Todos los derechos reservados a TecnoNexus</p>
+</footer>
+
+<script>
+window.onload = function () {
+  const overlay = document.getElementById("overlay");
+  const aprendices = document.getElementById("aprendices");
+
+   // 🔒 Bloquear scroll
+  document.body.style.overflow = "hidden";
+
+   // 1. Esperar 5s viendo solo el título
+  setTimeout(() => {
+    overlay.classList.add("full");
+  }, 5000);
+
+  // Cortina baja
+  setTimeout(() => {
+    overlay.classList.add("full");
+  }, 7000);
+
+  // Pausa en negro y hacer scroll mientras está tapado
+  setTimeout(() => {
+    document.getElementById("aprendices").scrollIntoView({ behavior: "smooth" });
+  }, 8000); // scroll ocurre mientras sigue negro
+
+  // Iniciar desvanecido
+  setTimeout(() => {
+    overlay.classList.add("fade-out");
+  }, 9500); // empieza a desvanecer después del scroll
+
+  // 4️⃣ Quitar overlay y mostrar info
+  setTimeout(() => {
+    overlay.style.display = "none";
+    aprendices.classList.add("visible");
+
+    // 🔓 Habilitar scroll pero bloquear volver arriba
+    document.body.style.overflow = "auto";
+    const minScroll = aprendices.offsetTop;
+    window.scrollTo(0, minScroll); // fijar inicio en aprendices
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY < minScroll) {
+        window.scrollTo(0, minScroll);
+      }
+    });
+  }, 9500);
+};
+</script>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluación - Tecno Nexus</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function mostrarSeccion(id) {
+      let secciones = document.querySelectorAll(".contenido");
+      secciones.forEach(seccion => seccion.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+</head>
+<body class="pagina-evaluacion">
+
+<header>
+  <img src="logoSena.png" alt="Logo SENA" class="logo-sena">
+  <div class="barra-navegacion">
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="analisis.html">Análisis</a></li>
+      <li><a href="planeacion.html">Planeación</a></li>
+      <li><a href="ejecucion.html">Ejecución</a></li>
+      <li><a href="evaluacion.html">Evaluación</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Menú lateral -->
+<div class="menu-lateral">
+  <h2>Fase de Evaluación</h2>
+  <ul>
+    <li><a href="#" onclick="mostrarSeccion('carta-satisfaccion')">4.1 Carta de Satisfacción</a></li>
+    <li><a href="#" onclick="mostrarSeccion('indicadores')">4.2 Indicadores y Resultados</a></li>
+    <li><a href="#" onclick="mostrarSeccion('video')">4.3 Video Recopilatorio</a></li>
+    <li><a href="#" onclick="mostrarSeccion('recomendaciones')">4.4 Recomendaciones</a></li>
+    <li><a href="#" onclick="mostrarSeccion('Conclusión')">4.5 Conclusión</a></li>
+  </ul>
+</div>
+
+<!-- Contenido -->
+
+<div class="contenido" id="carta-satisfaccion" style="display:block;">
+  <h2>4.1 Carta de Satisfacción del Servicio</h2>
+  <p>
+    A continuación se presentan las cartas de satisfacción firmadas por los aprendices.  
+    ⚠️ Nota: documentos pendientes de firma y sello institucional.
+  </p>
+
+  <div style="margin-bottom: 30px;">
+    <h3>Carta de Andrés Rodríguez</h3>
+    <iframe 
+      src="andres.pdf" 
+      width="100%" 
+      height="600px" 
+      style="border: none; border-radius: 10px; box-shadow: 0 0 10px rgba(162,89,255,0.3);">
+    </iframe>
+  </div>
+
+  <div style="margin-bottom: 30px;">
+    <h3>Carta de Víctor Ramírez</h3>
+    <iframe 
+      src="victor.pdf" 
+      width="100%" 
+      height="600px" 
+      style="border: none; border-radius: 10px; box-shadow: 0 0 10px rgba(162,89,255,0.3);">
+    </iframe>
+  </div>
+</div>
+
+<div class="contenido" id="indicadores">
+   <h2>4.2 Encuesta de Satisfacción del Servicio</h2>
+  <p>
+    Por favor diligencia el siguiente formulario de satisfacción. Tus respuestas nos ayudarán 
+    a mejorar la calidad del servicio prestado.
+  </p>
+
+  <iframe 
+    src="https://forms.gle/ctjcWtxbGxJxVTtm8" 
+    width="100%" 
+    height="800" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0" 
+    style="border-radius: 10px; box-shadow: 0 0 15px rgba(162,89,255,0.4); background:#fff;">
+    Cargando…
+  </iframe>
+</div>
+
+<div class="contenido" id="video">
+  <h2>4.3 Video Recopilatorio</h2>
+  <p>
+    Este apartado contendrá un video con la recopilación de todas las fases del proyecto.  
+    ⚠️ El material está en proceso de edición.
+  </p>
+</div>
+
+<div class="contenido" id="recomendaciones">
+  <h2>4.4 Recomendaciones para el Cliente</h2>
+  <p style="margin-top:15px; font-size:18px; color:#ddd; line-height:1.8;">
+    Después de implementar el servicio y comprobar que funciona correctamente, 
+    dejamos algunas recomendaciones importantes para que todo siga trabajando 
+    de forma estable, segura y sin problemas a futuro:
+  </p>
+
+  <ul style="margin-top:20px; font-size:18px; color:#fff; line-height:2;">
+    <li><strong>Respaldos frecuentes:</strong> Hacer copias de seguridad de la información 
+        al menos una vez por semana para evitar pérdidas en caso de fallos.</li>
+    <li><strong>Contraseñas seguras:</strong> Cambiar las claves de los usuarios cada cierto tiempo 
+        (por ejemplo, cada 3 meses) y no compartirlas.</li>
+    <li><strong>Revisiones periódicas:</strong> Revisar el estado del servidor y de los equipos 
+        una vez al mes para detectar problemas antes de que se vuelvan graves.</li>
+    <li><strong>Seguridad en carpetas:</strong> Mantener organizados los permisos de acceso para que 
+        cada persona solo pueda entrar a lo que realmente necesita.</li>
+    <li><strong>Capacitación básica:</strong> Dedicar un tiempo a enseñar a los usuarios cómo usar 
+        el sistema y las carpetas compartidas para evitar errores.</li>
+  </ul>
+
+  <p style="margin-top:25px; font-size:18px; color:#a259ff; line-height:1.8; font-weight:bold;">
+    Siguiendo estas recomendaciones, el servicio se mantendrá en buen estado, 
+    ofreciendo seguridad, orden y facilidad de uso para todos los que lo utilicen.
+  </p>
+</div>
+
+
+<div class="contenido" id="Conclusión">
+  <h2>4.5 Conclusión Final</h2>
+  <p style="margin-top:15px; font-size:18px; color:#ddd; line-height:1.8;">
+    Con este proyecto demostramos que, cuando hay organización y compromiso, 
+    es posible construir una red estable y confiable desde cero. 
+    Pasamos por la planeación, la ejecución y la validación de cada paso, 
+    aprendiendo en el camino y resolviendo los retos que se presentaron.
+  </p>
+
+  <p style="margin-top:15px; font-size:18px; color:#ddd; line-height:1.8;">
+    Lo más valioso no fue solo poner en marcha los servicios técnicos, 
+    sino entender la importancia de trabajar en equipo y cuidar cada detalle 
+    para que el resultado final realmente funcione para todos los usuarios.
+  </p>
+
+  <p style="margin-top:20px; font-size:18px; color:#a259ff; line-height:1.8; font-weight:bold;">
+    Este proyecto nos deja la satisfacción de haber convertido una idea en algo real, 
+    dejando listo un sistema seguro, ordenado y con mucho potencial para seguir creciendo.
+  </p>
+</div>
+
+<button onclick="mostrarSeccion('Conclusión')" class="boton-conclusiones">
+  Ver Conclusión
+</button>
+
+<footer>
+  <p>Creado por <strong>TecnoNexus</strong>. Todos los derechos reservados © 2025</p>
+</footer>
+
+</body>
+</html>

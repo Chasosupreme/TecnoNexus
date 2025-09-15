@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejecución - Tecno Nexus</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function mostrarSeccion(id) {
+      let secciones = document.querySelectorAll(".contenido");
+      secciones.forEach(seccion => seccion.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+</head>
+<body class="pagina-ejecucion">
+
+<header>
+  <img src="logoSena.png" alt="Logo SENA" class="logo-sena">
+  <div class="barra-navegacion">
+    <ul class="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="analisis.html">Análisis</a></li>
+    <li><a href="planeacion.html">Planeación</a></li>
+    <li><a href="ejecucion.html">Ejecución</a></li>
+    <li><a href="evaluacion.html">Evaluación</a></li>
+  </ul>
+</header>
+
+<div class="menu-lateral">
+  <h2>Fase de Ejecución</h2>
+  <ul>
+    <li><a href="#" onclick="mostrarSeccion('formato')">3.1 Formato Servicio Técnico</a></li>
+    <li><a href="#" onclick="mostrarSeccion('evidencias')">3.2 Evidencias Multimediales</a></li>
+    <li><a href="#" onclick="mostrarSeccion('facturas')">3.3 Facturas / Soportes</a></li>
+    <li><a href="#" onclick="mostrarSeccion('validacion')">3.4 Validación de Red y Servicios</a></li>
+    <li><a href="#" onclick="mostrarSeccion('conclusiones')">3.5 Conclusión</a></li>
+  </ul>
+</div>
+
+<div class="contenido" id="formato" style="display:block;">
+  <h2>3.1 Formato Servicio Técnico</h2>
+  <p style="color: #ffcc00; font-weight: bold; margin-bottom: 15px;">
+    ⚠️ Advertencia: Este documento aún falta por ser llenado completamente.
+  </p>
+
+  <div style="margin-bottom: 30px;">
+    <h3 style="margin-bottom: 10px;">Formato Técnico</h3>
+    <iframe 
+      src="Libro1.pdf" 
+      width="100%" 
+      height="600px" 
+      style="border: none; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); background: #111;">
+    </iframe>
+  </div>
+</div>
+
+<div class="contenido" id="evidencias">
+  <h2>3.2 Evidencias Multimediales</h2>
+  <p>
+    En esta sección se presentarán las evidencias audiovisuales del proceso de ejecución. 
+    Actualmente el material aún está en edición y pendiente de ser subido a la página web. 
+  </p>
+
+  <p style="margin-top: 30px; color: #ffcc00; font-weight: bold;">
+    ⚠️ Importante: Las evidencias definitivas (videos y capturas) se añadirán una vez terminada 
+    la edición y validadas por el instructor.
+  </p>
+</div>
+
+
+<div class="contenido" id="facturas">
+  <h2>3.3 Facturas / Soportes</h2>
+  <p>
+    Aquí se incluyen los formatos y soportes de préstamo de equipos. 
+    Actualmente los documentos están sin firmas y pendientes de validación.
+  </p>
+
+  <!-- Formato 1 -->
+  <div style="margin-bottom: 30px;">
+    <h3 style="margin-bottom: 10px;">Formato 1 - Préstamo de Equipos</h3>
+    <iframe 
+      src="formato 1.pdf" 
+      width="100%" 
+      height="600px" 
+      style="border: none; border-radius: 10px; box-shadow: 0 0 10px rgba(162,89,255,0.4);">
+    </iframe>
+    <p style="color:#ffcc00; margin-top: 8px; font-weight:bold;">
+      ⚠️ Documento pendiente de firmas.
+    </p>
+  </div>
+
+  <!-- Formato 2 -->
+  <div style="margin-bottom: 30px;">
+    <h3 style="margin-bottom: 10px;">Formato 2 - Prestamo de Equipos</h3>
+    <iframe 
+      src="formato 2.pdf" 
+      width="100%" 
+      height="600px" 
+      style="border: none; border-radius: 10px; box-shadow: 0 0 10px rgba(162,89,255,0.4);">
+    </iframe>
+    <p style="color:#ffcc00; margin-top: 8px; font-weight:bold;">
+      ⚠️ Documento pendiente de firmas.
+    </p>
+  </div>
+</div>
+
+
+<div class="contenido" id="validacion">
+  <h2>3.4 Validación de Red y Servicios</h2>
+  <p>
+    Capturas de pantalla con comandos ejecutados desde servidor y cliente. 
+    (Estas imágenes están hechas en un equipo Windows 10 y no en un servidor; 
+    falta subir las capturas reales. Estas son de prueba).
+  </p>
+
+  <div class="captura">
+    <h3>01 - ipconfig /all (cliente)</h3>
+    <img src="8.png" alt="ipconfig cliente">
+    <p>Muestra toda la configuración de red del cliente: dirección IP, máscara, puerta de enlace y servidores DNS.</p>
+  </div>
+
+  <div class="captura">
+    <h3>02 - ipconfig /all (servidor)</h3>
+    <img src="7.png" alt="ipconfig servidor">
+    <p>Confirma que el servidor tiene configurada su IP fija y el rol de DNS o puerta de enlace según lo planeado.</p>
+  </div>
+
+  <div class="captura">
+    <h3>03 - ping al servidor desde cliente</h3>
+    <img src="6.png" alt="ping cliente servidor">
+    <p>Comprueba la conexión básica: si el cliente recibe respuestas del servidor significa que hay comunicación en la red.</p>
+  </div>
+
+  <div class="captura">
+    <h3>04 - nslookup (comprobación DNS)</h3>
+    <img src="5.png" alt="nslookup">
+    <p>Verifica que el DNS responde correctamente y traduce nombres de dominio a direcciones IP.</p>
+  </div>
+
+  <div class="captura">
+    <h3>05 - tracert (ruta)</h3>
+    <img src="4.png" alt="tracert">
+    <p>Muestra el camino que siguen los paquetes hasta llegar al destino, útil para identificar saltos o problemas en la ruta.</p>
+  </div>
+
+  <div class="captura">
+    <h3>06 - netstat -an (puertos/servicios)</h3>
+    <img src="3.png" alt="netstat">
+    <p>Lista los puertos abiertos y las conexiones activas, confirmando que los servicios del servidor están en escucha.</p>
+  </div>
+
+  <div class="captura">
+    <h3>07 - gpresult /r (aplicación de políticas)</h3>
+    <img src="2.png" alt="gpresult">
+    <p>Muestra las políticas de grupo que se aplicaron en el cliente al estar dentro del dominio.</p>
+  </div>
+
+  <div class="captura">
+    <h3>08 - whoami / getmac / systeminfo (identidad y HW)</h3>
+    <img src="1.png" alt="whoami getmac systeminfo">
+    <p>
+      - <strong>whoami:</strong> identifica el usuario actual.<br>
+      - <strong>getmac:</strong> muestra la dirección física de la tarjeta de red.<br>
+      - <strong>systeminfo:</strong> da detalles del sistema como versión de Windows y hardware.
+    </p>
+  </div>
+
+  <p style="margin-top:20px; color:#ffcc00;">
+    Nota: sustituir imágenes de Windows 10 por capturas reales del servidor el día 19/9/2025 en la carpeta <code>capturas/</code>.
+  </p>
+</div>
+
+
+<div class="contenido" id="conclusiones">
+  <h2>3.5 Conclusión</h2>
+  <p>
+    En esta fase de ejecución pasamos de la planeación a la acción. Logramos instalar el servidor, 
+    crear el dominio y poner en marcha los servicios principales que necesitábamos, como el 
+    almacenamiento compartido y la resolución de nombres en la red.
+  </p>
+  <p>
+    También organizamos a los usuarios y equipos dentro de una misma estructura, aplicando reglas 
+    que aumentan la seguridad y el control sobre el acceso a la información. De esta forma, cada 
+    persona puede trabajar dentro de un entorno más ordenado y confiable.
+  </p>
+  <p>
+    Finalmente, comprobamos el funcionamiento de todo con pruebas sencillas como verificar la conexión 
+    entre equipos y el acceso a los archivos. Gracias a esto confirmamos que el sistema que construimos 
+    no solo es funcional, sino que también ofrece estabilidad y facilidad de uso.
+  </p>
+  <p>
+    Con este trabajo dejamos claro que, con organización y práctica, es posible convertir una red común 
+    en una herramienta segura, bien estructurada y lista para seguir creciendo en el futuro.
+  </p>
+</div>
+
+
+<button onclick="mostrarSeccion('conclusiones')" class="boton-conclusiones">
+  Ver Conclusión
+</button>
+
+<footer>
+  <p>Creado por <strong>TecnoNexus</strong>. Todos los derechos reservados © 2025</p>
+</footer>
+
+</body>
+</html>

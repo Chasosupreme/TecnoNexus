@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planeación - Tecno Nexus</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function mostrarSeccion(id) {
+      let secciones = document.querySelectorAll(".contenido");
+      secciones.forEach(seccion => seccion.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+</head>
+<body class="pagina-planeacion">
+
+<header>
+  <img src="logoSena.png" alt="Logo SENA" class="logo-sena">
+  <div class="barra-navegacion">
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="analisis.html">Análisis</a></li>
+      <li><a href="planeacion.html">Planeación</a></li>
+      <li><a href="ejecucion.html">Ejecución</a></li>
+      <li><a href="evaluacion.html">Evaluación</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="menu-lateral">
+  <h2>Fase de Planeación</h2>
+  <ul>
+    <li><a href="#" onclick="mostrarSeccion('cotizaciones')">2.1 Tabla de Cotizaciones</a></li>
+    <li><a href="#" onclick="mostrarSeccion('cronograma')">2.2 Cronograma de Actividades</a></li>
+    <li><a href="#" onclick="mostrarSeccion('evidencias')">2.3 Evidencias</a></li>
+    <li><a href="#" onclick="mostrarSeccion('arbol')">2.4 Arbol de Dominio</a></li>
+    <li><a href="#" onclick="mostrarSeccion('conclusiones')">2.5 Conclusión</a></li>
+  </ul>
+</div>
+
+<div class="contenido" id="cotizaciones">
+  <h2>2.1 Tabla de Cotizaciones</h2>
+  <p>A continuación se muestra la tabla de cotizaciones del proyecto:</p>
+
+  <!-- Incrustar la hoja de cálculo de Google Sheets -->
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSRBO5O4TDX_gM1NgLzb4cswLzIi7i51dNWNBrk7eboxtiSTHcLhknAZHU-H7mMnA/pubhtml" 
+          width="100%" 
+          height="600" 
+          style="border: none;">
+  </iframe>
+
+  <p style="font-size: 0.9rem; color: #aaa;"></p>
+</div>
+
+
+<div class="contenido" id="cronograma">
+  <h2>2.2 Cronograma de Actividades</h2>
+  <p>A continuación se muestra el Cronograma del proyecto:</p>
+  <!-- Incrustar la hoja de cálculo de Google Sheets -->
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTFppM5xR7bUMej2H_Hui85_qimLz9Nuplc7khtFAXFVcxEI5w4WvGJ9bsilu09LA/pubhtml"
+          width="100%" 
+          height="600" 
+          style="border: none;">
+  </iframe>
+
+  <p style="font-size: 0.9rem; color: #aaa;"></p>
+</div>
+
+<div class="contenido" id="evidencias">
+  <h2>2.3 Evidencias</h2>
+  <p>En esta sección se incluyen los registros de las actividades realizadas durante la fase de planeación:</p>
+
+  <!-- Archivo Excel -->
+  <h3 style="margin-top: 25px;">Formato Técnico</h3>
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5VNBjelZ-7D6MQEz6BJmiUPpCN5emcDHMq4bw4xy34DVsPe22mQe32ovZuCdBUw/pubhtml"
+          width="100%" 
+          height="600" 
+          style="border: none;">
+  </iframe>
+  <p style="font-size: 0.9rem; color: #aaa;"></p>
+
+  <!-- Video de mantenimiento -->
+  <h3 style="margin-top: 35px;">Video Mantenimiento</h3>
+  <a href="https://youtu.be/7UdDjNbX8lQ" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
+         alt="Video Mantenimiento"
+         style="width: 100px; margin-top: 10px; cursor: pointer;">
+  </a>
+  <p style="font-size: 0.9rem; color: #aaa;">Haz clic en el ícono para ver el video en YouTube.</p>
+
+  <!-- Nuevo video: Computadores a utilizar -->
+  <h3 style="margin-top: 35px;">Computadores a Utilizar</h3>
+  <a href="video_computadores.mp4" target="_blank">
+    <video width="320" height="180" controls style="margin-top: 10px;">
+      <source src="video_computadores.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+  </a>
+  <p style="font-size: 0.9rem; color: #aaa;">Video local: <strong>Computadores a utilizar</strong></p>
+</div>
+  
+<div class="contenido" id="arbol">
+  <h2>2.4 Árbol de Dominio</h2>
+  <p>
+    El árbol de dominio representa la estructura jerárquica de los recursos y políticas dentro de una red basada en dominio. Cada nodo dentro de este árbol refleja una unidad organizativa o una función clave, desde la administración de usuarios con distintos niveles de acceso, hasta configuraciones avanzadas como servidores DNS, políticas de grupo (GPO) y servicios de red específicos. Esta jerarquía permite aplicar permisos y restricciones de manera precisa y centralizada, garantizando un entorno seguro, controlado y adaptado a las necesidades operativas del dominio <strong>tecnonexus.local</strong>.
+  </p>
+
+  <img src="arbol.png" alt="Árbol de Dominio TecnoNexus" style="width:100%; max-width:700px; display:block; margin: 20px auto; border: 2px solid #000; border-radius: 10px;">
+</div>
+
+<div class="contenido" id="conclusiones">
+  <h2>2.5 Conclusión</h2>
+  <p>
+    Durante esta fase de planeación se organizaron todos los recursos necesarios para iniciar la instalación y configuración de la red. 
+    Se evaluaron costos, materiales y actividades, y se programaron de acuerdo con la disponibilidad del aula técnica. 
+    La documentación fue fundamental para proyectar correctamente cada paso y prever posibles inconvenientes.
+  </p>
+</div>
+
+<button onclick="mostrarSeccion('conclusiones')" class="boton-conclusiones">
+  Ver Conclusión
+</button>
+
+<footer>
+  <p>Creado por <strong>TecnoNexus</strong>. Todos los derechos reservados © 2025</p>
+</footer>
+
+</body>
+</html>
