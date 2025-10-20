@@ -1,4 +1,4 @@
-/* ░░░░░░ CONFIGURACIÓN GLOBAL ░░░░░░ */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +10,9 @@ body {
   color: white;
   overflow-x: hidden;
   background-color: #000;
-  display: block; /* ✅ quitar flex que deformaba planeación */
+  display: block; 
 }
 
-/* ░░░░░░ HEADER GLOBAL ░░░░░░ */
 header {
   position: fixed;
   top: 0;
@@ -23,7 +22,7 @@ header {
   background: #0f0d0d;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* ✅ siempre logo izq, menú der */
+  justify-content: space-between; 
   padding: 0 20px;
   z-index: 1000;
 }
@@ -33,7 +32,6 @@ header {
   width: auto;
 }
 
-/* Menú principal */
 .menu {
   display: flex;
   gap: 15px;
@@ -46,7 +44,7 @@ header {
 
 .menu a {
   position: relative;
-  color: #ddd; /* color más apagado */
+  color: #ddd;
   text-decoration: none;
   padding: 8px 15px;
   background: #000;
@@ -55,7 +53,7 @@ header {
   transition: color 0.3s;
 }
 
-/* Línea inferior luminosa */
+
 .menu a::after {
   content: "";
   position: absolute;
@@ -65,12 +63,12 @@ header {
   height: 2px;
   background: linear-gradient(90deg, #4b0082, #00a2ff);
   border-radius: 2px;
-  opacity: 0.4; /* apagado por defecto */
+  opacity: 0.4; 
   transition: opacity 0.3s, transform 0.3s;
 }
 
 
-/* Hover: se enciende más */
+
 .menu a:hover {
   color: #fff;
 }
@@ -80,7 +78,7 @@ header {
   transform: scaleX(1.1);
 }
 
-/* Animación de pulso suave en la línea */
+
 @keyframes pulseLine {
   0% { opacity: 0.3; }
   50% { opacity: 0.7; }
@@ -91,7 +89,7 @@ header {
   animation: pulseLine 3s infinite ease-in-out;
 }
 
-/* ░░░░░░ PIE DE PÁGINA ░░░░░░ */
+
 footer {
   position: fixed;
   bottom: 0;
@@ -103,7 +101,7 @@ footer {
   z-index: 10;
 }
 
-/* ░░░░░░ PORTADA ░░░░░░ */
+
 .portada {
   height: 100vh;
   display: flex;
@@ -121,27 +119,26 @@ footer {
   text-shadow: 4px 4px 10px black;
 }
 
-/* ░░░░░░ SECCIÓN DE APRENDICES ░░░░░░ */
 
-/* Fondo negro que baja como degradado */
+
 .overlay-transition {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 0;
-  background: rgba(0, 0, 0, 0.6); /* translúcido al inicio */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 9999;
   transition: height 1.5s ease-in-out, background 0.8s ease-in-out;
 }
 
-/* Estado final: cortina negra sólida */
+
 .overlay-transition.full {
   height: 100%;
   background: #000;
 }
 
-/* Info de aprendices oculta al inicio */
+
 #aprendices {
   opacity: 0;
   transform: scale(0.95);
@@ -191,7 +188,6 @@ footer {
   line-height: 1.5;
 }
 
-/* ░░░░░░ MENÚ LATERAL ░░░░░░ */
 .menu-lateral {
   overflow-y: auto;
   scrollbar-width: thin;
@@ -251,7 +247,6 @@ footer {
   letter-spacing: 0.5px;
 }
 
-/* Línea inferior resplandeciente morada */
 .menu-lateral a::after {
   content: "";
   position: absolute;
@@ -259,14 +254,14 @@ footer {
   bottom: 4px;
   width: calc(100% - 30px);
   height: 2px;
-  background: rgba(162, 89, 255, 0.6); /* morado brillante */
+  background: rgba(162, 89, 255, 0.6); 
   border-radius: 2px;
-  box-shadow: 0 0 6px rgba(162, 89, 255, 0.8); /* glow leve */
-  opacity: 0.3; /* bien sutil */
+  box-shadow: 0 0 6px rgba(162, 89, 255, 0.8); 
+  opacity: 0.3; 
   transition: opacity 0.3s, transform 0.3s;
 }
 
-/* Hover: se enciende más */
+
 .menu-lateral a:hover {
   color: #fff;
 }
@@ -276,24 +271,24 @@ footer {
   transform: scaleX(1.05);
 }
 
-/* ░░░░░░ CONTENIDO ░░░░░░ */
+
 .contenido {
-  margin-left: 300px;  /* separación estándar con el menú */
+  margin-left: 300px;  
   padding: 50px;
   display: none;
   min-height: 100vh;
   background: linear-gradient(
     to right,
-    rgba(0, 162, 255, 0.25) 0%,   /* azul neón pegado al borde */
-    rgba(0, 162, 255, 0.05) 10px, /* se difumina */
-    rgba(0, 0, 0, 1) 100%         /* fondo negro hacia el centro */
+    rgba(0, 162, 255, 0.25) 0%,   
+    rgba(0, 162, 255, 0.05) 10px,
+    rgba(0, 0, 0, 1) 100%        
   );
-  box-shadow: inset 0 0 25px rgba(0, 162, 255, 0.4); /* resplandor interno */
-  border-left: 2px solid rgba(0, 162, 255, 0.7); /* línea neón */
-  overflow-y: auto; /* scroll siempre disponible */
+  box-shadow: inset 0 0 25px rgba(0, 162, 255, 0.4);
+  border-left: 2px solid rgba(0, 162, 255, 0.7); 
+  overflow-y: auto;
 }
 
-/* Scrollbar morado */
+
 .contenido::-webkit-scrollbar {
   width: 8px;
 }
@@ -308,12 +303,12 @@ footer {
   background: #111;
 }
 
-/* ░░░ TITULOS Y TEXTO DEL CONTENIDO ░░░ */
+
 .contenido h2 {
   font-size: 2rem;
   color: #00a2ff;
   margin-bottom: 20px;
-  border-bottom: 2px solid rgba(0, 162, 255, 0.4); /* línea decorativa */
+  border-bottom: 2px solid rgba(0, 162, 255, 0.4); 
   padding-bottom: 8px;
   text-shadow: 0 0 10px rgba(0, 162, 255, 0.6);
 }
@@ -335,20 +330,20 @@ footer {
   color: #ddd;
 }
 
-/* Listas más ordenadas */
+
 .contenido ul {
   padding-left: 25px;
   margin-bottom: 20px;
 }
 
-/* Mostrar siempre la primera sección */
+
 #introduccion,
 #cotizaciones,
 #formato {
   display: block;
 }
 
-/* ░░░░░░ Capturas ░░░░░░ */
+
 
 .captura {
       margin-top: 30px;
@@ -359,8 +354,8 @@ footer {
   margin: 0 auto;
   width: 100%;
   max-width: 900px;
-  height: auto; /* 👈 mantiene proporción */
-  object-fit: contain; /* 👈 asegura que no se deforme */
+  height: auto;
+  object-fit: contain; 
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(162,89,255,0.3);
 }
@@ -371,7 +366,6 @@ footer {
       line-height: 1.5;
     }
 
-/* ░░░░░░ BOTONES ░░░░░░ */
 .boton-conclusiones {
   position: fixed;
   bottom: 30px;
@@ -380,7 +374,7 @@ footer {
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(135deg, #4b0082, #00a2ff); /* morado → azul */
+  background: linear-gradient(135deg, #4b0082, #00a2ff); 
   border: 2px solid #00a2ff;
   border-radius: 8px;
   cursor: pointer;
@@ -390,13 +384,13 @@ footer {
 }
 
 
-/* Hover efecto neón más intenso */
+
 .boton-conclusiones:hover {
   transform: scale(1.08);
   box-shadow: 0 0 20px rgba(0, 162, 255, 1), 0 0 40px rgba(75, 0, 130, 0.9);
 }
 
-/* ░░░░░░ PÁGINAS ESPECÍFICAS ░░░░░░ */
+
 .pagina-intro {
   background: linear-gradient(135deg, #000, #1a002b);
 }
@@ -410,7 +404,7 @@ footer {
 }
 
 
-/* Animación glow suave */
+
 @keyframes neonPulse {
   0% { box-shadow: 0 0 15px rgba(0, 162, 255, 0.7), 0 0 30px rgba(75, 0, 130, 0.6); }
   50% { box-shadow: 0 0 25px rgba(0, 162, 255, 1), 0 0 50px rgba(75, 0, 130, 0.9); }
@@ -421,7 +415,6 @@ footer {
   animation: neonPulse 3s infinite alternate;
 }
 
-/* ░░░░░░ RESPONSIVE ░░░░░░ */
 @media screen and (max-width: 768px) {
   .menu-lateral {
     width: 100%;
